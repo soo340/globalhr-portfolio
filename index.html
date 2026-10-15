@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="GlobalHR — 外国人社員の在留資格・期限・更新履歴を管理するWebシステム。Java、JSP、OracleとJDBCによるチーム開発のポートフォリオ。">
+<title>GlobalHR | Web Development Portfolio</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#overview">Skip to content</a>
+<header class="site-header" id="top"><div class="header-inner shell">
+<a class="brand" href="#top"><span class="brand-symbol">G<span class="brand-dot">.</span></span><span class="brand-copy"><strong>GlobalHR</strong><small>PROJECT PORTFOLIO</small></span></a>
+<nav class="main-nav" id="main-nav" aria-label="Navigation">
+<a href="#overview"><span  data-ja="概要" data-ko="개요">概要</span></a>
+<a href="#features"><span  data-ja="機能" data-ko="기능">機能</span></a>
+<a href="#engineering"><span  data-ja="実装ポイント" data-ko="기술 구현">実装ポイント</span></a>
+<a href="#architecture"><span  data-ja="構成" data-ko="구조">構成</span></a>
+<a href="#screens"><span  data-ja="画面" data-ko="실제 화면">画面</span></a>
+<a href="#status"><span  data-ja="検証・範囲" data-ko="검증·범위">検証・範囲</span></a>
+</nav>
+<div class="header-actions"><div class="lang-switch" role="group" aria-label="Language">
+<button type="button" class="lang is-active" data-lang="ja" aria-pressed="true">JP</button><button type="button" class="lang" data-lang="ko" aria-pressed="false">KO</button></div>
+<a class="head-gh" href="https://github.com/bizkh7/foreign-employee-management/tree/fix/project-integration" target="_blank" rel="noopener noreferrer" title="Source repository; permissions may be required" aria-label="GitHub repository">GitHub ↗</a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+</div></div></header>
+<main>
+<section class="hero" aria-labelledby="hero-title"><div class="hero-glow"></div><div class="shell hero-grid"><div class="hero-copy">
+<div class="eyebrow light"><span class="pulse"></span> <span  data-ja="JAVA / JSP / ORACLE · TEAM PROJECT" data-ko="JAVA / JSP / ORACLE · 팀 프로젝트">JAVA / JSP / ORACLE · TEAM PROJECT</span></div>
+<p class="hero-kicker">ENGINEERING FOR BETTER PEOPLE OPERATIONS.</p>
+<h1 id="hero-title"><span  data-ja="在留管理を、" data-ko="재류 관리를,">在留管理を、</span><br><em><span  data-ja="見える化する。" data-ko="한눈에 보이게.">見える化する。</span></em></h1>
+<p class="hero-desc"><span  data-ja="外国人社員の情報・在留期限・更新進捗を一元管理。検索、アラート、変更履歴、データ整合性まで考慮したWebアプリケーションの開発事例です。" data-ko="외국인 직원 정보·체류 만료일·갱신 진행 상황을 통합 관리합니다. 검색, 알림, 변경 이력, 데이터 정합성까지 고려한 웹 애플리케이션 개발 사례입니다.">外国人社員の情報・在留期限・更新進捗を一元管理。検索、アラート、変更履歴、データ整合性まで考慮したWebアプリケーションの開発事例です。</span></p>
+<div class="hero-cta"><a class="btn btn-primary" href="#screens"><span  data-ja="画面デモを見る" data-ko="화면 보기">画面デモを見る</span> <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#engineering"><span  data-ja="技術的な実装" data-ko="기술 구현">技術的な実装</span> <span aria-hidden="true">→</span></a></div>
+<div class="hero-tech"><span>JAVA 17</span><span>JSP / SERVLET</span><span>JDBC</span><span>ORACLE</span><span>i18n</span></div>
+<div class="hero-numbers"><div><strong>30·60·90</strong><small><span  data-ja="期限絞り込み（日）" data-ko="만료 필터(일)">期限絞り込み（日）</span></small></div><div><strong>5 + 6</strong><small><span  data-ja="更新段階 + 書類項目" data-ko="갱신 단계 + 서류 항목">更新段階 + 書類項目</span></small></div><div><strong>3</strong><small><span  data-ja="アプリ対応言語" data-ko="앱 지원 언어">アプリ対応言語</span></small></div></div>
+</div><div class="hero-visual"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+<div class="floating-chip chip-one"><span class="mini-chip-icon">▤</span><div><strong>GlobalHR</strong><small>EMPLOYEE OPERATIONS</small></div></div>
+<div class="browser-mock"><div class="browser-top"><span class="traffic"><b></b><b></b><b></b></span><span class="browser-url">GlobalHR / employee registry</span><span class="browser-badge">JSP MOCK RENDER</span></div>
+<img src="assets/screens/list-ja.webp" data-shot="list" alt="GlobalHR 在留管理画面、日本語版のJSPテストレンダリング" width="1420" height="1265" fetchpriority="high"></div>
+<div class="floating-chip chip-two"><span class="mini-chip-icon cyan">✓</span><div><strong><span  data-ja="在留期限を可視化" data-ko="재류 만료일 가시화">在留期限を可視化</span></strong><small>DATA-DRIVEN STATUS</small></div></div>
+</div></div><div class="hero-footer shell"><span>01 / GLOBALHR CASE STUDY</span><span class="scroll-label"><span  data-ja="スクロールで詳細を見る" data-ko="스크롤하여 자세히 보기">スクロールで詳細を見る</span> ↓</span></div></section>
+
+<section class="section overview" id="overview"><div class="shell">
+<div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 01 / OVERVIEW</div><h2  data-ja="プロジェクト概要" data-ko="프로젝트 개요">プロジェクト概要</h2></div><p><span  data-ja="社員情報から更新履歴まで、業務データをひとつにつなぐ。" data-ko="직원 정보에서 갱신 이력까지 업무 데이터를 하나로 연결합니다.">社員情報から更新履歴まで、業務データをひとつにつなぐ。</span></p></div>
+<div class="overview-layout"><div class="overview-copy">
+<h3  data-ja="「期限の見落とし」を減らすための管理システム" data-ko="만료일 누락을 줄이기 위한 관리 시스템">「期限の見落とし」を減らすための管理システム</h3>
+<p  data-ja="外国人社員の基本情報と在留資格・有効期限・更新業務を一画面から追跡します。期限の自動分類、更新チェックリスト、操作履歴に加え、データ更新時の競合や不整合まで考慮しました。" data-ko="외국인 직원의 기본 정보와 재류자격·유효기간·갱신 업무를 한곳에서 관리합니다. 만료일 자동 분류, 갱신 체크리스트, 변경 이력뿐 아니라 동시 수정과 데이터 불일치도 고려했습니다.">外国人社員の基本情報と在留資格・有効期限・更新業務を一画面から追跡します。期限の自動分類、更新チェックリスト、操作履歴に加え、データ更新時の競合や不整合まで考慮しました。</p>
+<div class="note-inline"><span aria-hidden="true">ⓘ</span><span  data-ja="掲載画面は最終ブランチのJSPをテスト環境でレンダリングしたサンプルです。実運用サーバー・Oracleの稼働画面ではありません。" data-ko="게시된 화면은 최종 브랜치 JSP를 테스트 환경에서 렌더링한 예시입니다. 실제 운영 서버·Oracle 구동 화면은 아닙니다.">掲載画面は最終ブランチのJSPをテスト環境でレンダリングしたサンプルです。実運用サーバー・Oracleの稼働画面ではありません。</span></div>
+</div><div class="info-card"><div class="info-title">PROJECT INFORMATION</div><dl>
+<div><dt><span  data-ja="プロジェクト" data-ko="프로젝트명">プロジェクト</span></dt><dd>GlobalHR</dd></div>
+<div><dt><span  data-ja="対象業務" data-ko="대상 업무">対象業務</span></dt><dd><span  data-ja="外国人社員・在留管理" data-ko="외국인 직원·재류 관리">外国人社員・在留管理</span></dd></div>
+<div><dt><span  data-ja="開発方式" data-ko="개발 형태">開発方式</span></dt><dd><span  data-ja="チーム開発" data-ko="팀 프로젝트">チーム開発</span></dd></div>
+<div><dt><span  data-ja="開発技術" data-ko="기술 스택">開発技術</span></dt><dd>Java 17 · JSP · Servlet · JDBC · Oracle</dd></div>
+<div><dt><span  data-ja="作業ブランチ" data-ko="대상 브랜치">作業ブランチ</span></dt><dd><code>fix/project-integration</code></dd></div>
+<div><dt><span  data-ja="ソースコード" data-ko="소스코드">ソースコード</span></dt><dd><a href="https://github.com/bizkh7/foreign-employee-management/tree/fix/project-integration" target="_blank" rel="noopener noreferrer">GitHub ↗</a></dd></div>
+</dl></div></div></div></section>
+
+<section class="section features light-section" id="features"><div class="shell"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 02 / CAPABILITIES</div><h2  data-ja="8つの実装ポイント" data-ko="8가지 주요 구현 기능">8つの実装ポイント</h2></div><p><span  data-ja="画面の見栄えだけでなく、データ処理と業務フローまで。" data-ko="화면 디자인뿐 아니라 데이터 처리와 업무 흐름까지 구현했습니다.">画面の見栄えだけでなく、データ処理と業務フローまで。</span></p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><div class="feature-icon blue" aria-hidden="true">▤</div><h3  data-ja="社員マスタのCRUD" data-ko="직원 정보 CRUD">社員マスタのCRUD</h3><p  data-ja="社員の登録・編集・削除を共通の検証ルールで処理。社員番号の重複判定、入力エラーのフィールド表示、登録内容の保持に対応。" data-ko="직원 등록·수정·삭제를 공통 검증 규칙으로 처리합니다. 사번 중복, 필드별 오류, 입력값 유지까지 반영했습니다.">社員の登録・編集・削除を共通の検証ルールで処理。社員番号の重複判定、入力エラーのフィールド表示、登録内容の保持に対応。</p><span class="feature-tag"><span  data-ja="EmployeeService / EmployeeValidator" data-ko="EmployeeService / EmployeeValidator">EmployeeService / EmployeeValidator</span></span></article>
+<article class="feature-card"><span class="feature-index">02</span><div class="feature-icon orange" aria-hidden="true">◷</div><h3  data-ja="在留期限・アラート" data-ko="체류기간 만료 알림">在留期限・アラート</h3><p  data-ja="期限切れ・30日以内・90日以内などを日付に基づいて分類。30/60/90日の絞り込みと、在職者を対象とする期限判定を実装。" data-ko="실제 날짜 기반으로 만료·30일 이내·90일 이내 등 상태를 계산합니다. 30/60/90일 필터와 재직자 기준을 적용했습니다.">期限切れ・30日以内・90日以内などを日付に基づいて分類。30/60/90日の絞り込みと、在職者を対象とする期限判定を実装。</p><span class="feature-tag"><span  data-ja="期限フィルター / 状態計算" data-ko="만료 필터 / 상태 계산">期限フィルター / 状態計算</span></span></article>
+<article class="feature-card"><span class="feature-index">03</span><div class="feature-icon mint" aria-hidden="true">☷</div><h3  data-ja="更新ワークフロー" data-ko="갱신 업무 흐름">更新ワークフロー</h3><p  data-ja="在留更新を5段階の進捗として管理し、6項目の書類チェックと担当者メモを保存。更新状態の変更履歴も連動して記録。" data-ko="재류 갱신 5단계 진행 상태, 6개 서류 체크리스트, 담당자 메모를 저장하고 변경 이력과 연동합니다.">在留更新を5段階の進捗として管理し、6項目の書類チェックと担当者メモを保存。更新状態の変更履歴も連動して記録。</p><span class="feature-tag"><span  data-ja="5ステップ / 6チェック" data-ko="5단계 / 6개 체크 항목">5ステップ / 6チェック</span></span></article>
+<article class="feature-card"><span class="feature-index">04</span><div class="feature-icon purple" aria-hidden="true">≡</div><h3  data-ja="操作履歴と追跡" data-ko="변경 이력 및 추적">操作履歴と追跡</h3><p  data-ja="誰が・いつ・何を変更したかを記録。社員情報・更新状態の変更を確認でき、機密番号は履歴に複製せず変更有無のみを残す設計。" data-ko="누가 언제 무엇을 변경했는지 기록합니다. 직원·갱신 정보 변경을 추적하며 민감한 번호는 이력에 복제하지 않습니다.">誰が・いつ・何を変更したかを記録。社員情報・更新状態の変更を確認でき、機密番号は履歴に複製せず変更有無のみを残す設計。</p><span class="feature-tag"><span  data-ja="監査ログ / マスキング" data-ko="감사 이력 / 민감정보 마스킹">監査ログ / マスキング</span></span></article>
+<article class="feature-card"><span class="feature-index">05</span><div class="feature-icon blue" aria-hidden="true">⌕</div><h3  data-ja="検索・ページング" data-ko="검색 및 페이지 나누기">検索・ページング</h3><p  data-ja="キーワード、国籍、在留資格、期限状態などで絞り込み。10/20/50件の表示切替とソート、条件付きCSV一括出力をサポート。" data-ko="키워드·국적·체류자격·만료 상태를 검색하고 10/20/50건 페이징·정렬 및 조건별 CSV 전체 내보내기를 지원합니다.">キーワード、国籍、在留資格、期限状態などで絞り込み。10/20/50件の表示切替とソート、条件付きCSV一括出力をサポート。</p><span class="feature-tag"><span  data-ja="10 / 20 / 50件 · CSV" data-ko="10 / 20 / 50건 · CSV">10 / 20 / 50件 · CSV</span></span></article>
+<article class="feature-card"><span class="feature-index">06</span><div class="feature-icon mint" aria-hidden="true">▥</div><h3  data-ja="集計ダッシュボード" data-ko="통계 대시보드">集計ダッシュボード</h3><p  data-ja="期限状況・国籍別分布・優先対応社員を管理画面に可視化。表示値は実際のレコードからサーバー側で集計。" data-ko="만료 상태·국적별 분포·우선 대응 직원을 시각화합니다. 화면 수치는 서버에서 실제 레코드를 집계합니다.">期限状況・国籍別分布・優先対応社員を管理画面に可視化。表示値は実際のレコードからサーバー側で集計。</p><span class="feature-tag"><span  data-ja="集計 / 優先対応" data-ko="통계 / 우선순위">集計 / 優先対応</span></span></article>
+<article class="feature-card"><span class="feature-index">07</span><div class="feature-icon purple" aria-hidden="true">文</div><h3  data-ja="日本語・韓国語・英語" data-ko="일본어·한국어·영어">日本語・韓国語・英語</h3><p  data-ja="ResourceBundleベースのメッセージ辞書で主要画面を3言語対応。ポートフォリオの画面画像もJP/KOを切り替え表示。" data-ko="메시지 리소스를 이용해 주요 앱 화면을 3개 언어로 제공합니다. 포트폴리오 이미지도 일본어/한국어에 맞춰 바뀝니다.">ResourceBundleベースのメッセージ辞書で主要画面を3言語対応。ポートフォリオの画面画像もJP/KOを切り替え表示。</p><span class="feature-tag"><span  data-ja="i18n / 3言語" data-ko="i18n / 3개 언어">i18n / 3言語</span></span></article>
+<article class="feature-card"><span class="feature-index">08</span><div class="feature-icon orange" aria-hidden="true">⚙</div><h3  data-ja="安全な更新処理" data-ko="안전한 데이터 수정">安全な更新処理</h3><p  data-ja="row_versionを使った競合チェック、CSRF対策、POSTによる保存・削除、JDBCトランザクションによる業務データと履歴の同時更新。" data-ko="row_version 충돌 검사, CSRF 검증, POST 저장·삭제, JDBC 트랜잭션으로 업무 데이터와 이력을 함께 처리합니다.">row_versionを使った競合チェック、CSRF対策、POSTによる保存・削除、JDBCトランザクションによる業務データと履歴の同時更新。</p><span class="feature-tag"><span  data-ja="競合防止 / rollback" data-ko="충돌 방지 / rollback">競合防止 / rollback</span></span></article></div></div></section>
+
+<section class="section engineering" id="engineering"><div class="shell"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 03 / ENGINEERING</div><h2  data-ja="技術的にこだわった部分" data-ko="기술적으로 강조할 부분">技術的にこだわった部分</h2></div><p><span  data-ja="面接で実装の意図を説明できる、3つのテーマ。" data-ko="면접에서 구현 의도를 설명할 수 있는 세 가지 핵심 주제입니다.">面接で実装の意図を説明できる、3つのテーマ。</span></p></div>
+<div class="engineering-grid"><article class="engineering-card"><span class="engineering-index">ENGINEERING / 01</span><h3  data-ja="更新履歴までまとめて確定" data-ko="변경 이력까지 하나의 트랜잭션으로">更新履歴までまとめて確定</h3>
+<p  data-ja="社員情報・在留情報・更新進捗と監査履歴を同じJDBC Connectionで保存。途中で監査ログの書き込みに失敗した場合は業務データもrollbackし、部分保存を防ぎます。" data-ko="직원·재류·갱신 데이터와 감사 이력을 동일 JDBC Connection으로 처리합니다. 이력 기록이 실패하면 업무 데이터도 rollback하여 부분 저장을 방지합니다.">社員情報・在留情報・更新進捗と監査履歴を同じJDBC Connectionで保存。途中で監査ログの書き込みに失敗した場合は業務データもrollbackし、部分保存を防ぎます。</p>
+<code>EmployeeDao.*WithAudit / AuditDao</code><div class="engineering-tag">COMMIT / ROLLBACK</div></article>
+<article class="engineering-card"><span class="engineering-index">ENGINEERING / 02</span><h3  data-ja="古い画面からの上書きを防止" data-ko="이전 화면의 덮어쓰기 방지">古い画面からの上書きを防止</h3>
+<p  data-ja="row_versionを使った楽観的ロックで編集競合を検知。既に更新された社員データを古い画面から保存しようとした場合は409を返し、最新版の再読み込みへ誘導します。" data-ko="row_version 기반 낙관적 잠금으로 수정 충돌을 감지합니다. 오래된 화면에서 저장하면 409 충돌로 거부하고 최신 데이터를 다시 열도록 유도합니다.">row_versionを使った楽観的ロックで編集競合を検知。既に更新された社員データを古い画面から保存しようとした場合は409を返し、最新版の再読み込みへ誘導します。</p>
+<code>EmployeeService / row_version</code><div class="engineering-tag">OPTIMISTIC LOCKING</div></article>
+<article class="engineering-card"><span class="engineering-index">ENGINEERING / 03</span><h3  data-ja="入力検証を画面とサービスで統一" data-ko="화면과 서비스의 입력 검증 일치">入力検証を画面とサービスで統一</h3>
+<p  data-ja="必須項目・日付・文字数・重複パラメータをサーバー側で検証。直接Serviceを呼ぶ経路でも同じルールを適用し、CSVの出力内容は検索条件に連動させています。" data-ko="필수값·날짜·글자 수·중복 파라미터를 서버에서 검증합니다. Service 직접 호출에도 동일 규칙을 적용하고 CSV 출력은 검색 필터와 연동합니다.">必須項目・日付・文字数・重複パラメータをサーバー側で検証。直接Serviceを呼ぶ経路でも同じルールを適用し、CSVの出力内容は検索条件に連動させています。</p>
+<code>EmployeeValidator / Csv / Web</code><div class="engineering-tag">SERVER-SIDE VALIDATION</div></article></div>
+<div class="showcase-grid">
+<div class="showcase-shot"><div class="shot-caption"><strong><span  data-ja="更新詳細画面" data-ko="갱신 상세 화면">更新詳細画面</span></strong><span>JSP MOCK · DETAIL</span></div><img data-shot="detail" src="assets/screens/detail-ja.webp" alt="更新詳細画面" loading="lazy"><p><span  data-ja="5段階の進捗、書類チェック、メモ入力をひとつの画面で管理。" data-ko="5단계 진행 상태·서류 체크·메모를 한 화면에서 관리합니다.">5段階の進捗、書類チェック、メモ入力をひとつの画面で管理。</span></p></div>
+<div class="showcase-shot"><div class="shot-caption"><strong><span  data-ja="変更履歴画面" data-ko="변경 이력 화면">変更履歴画面</span></strong><span>JSP MOCK · AUDIT</span></div><img data-shot="audit" src="assets/screens/audit-ja.webp" alt="変更履歴画面" loading="lazy"><p><span  data-ja="担当者と変更対象、変更前後の値を追跡可能。" data-ko="담당자·변경 항목·변경 전후 값을 추적할 수 있습니다.">担当者と変更対象、変更前後の値を追跡可能。</span></p></div>
+</div>
+</div></section>
+
+<section class="section architecture light-section" id="architecture"><div class="shell"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 04 / ARCHITECTURE</div><h2  data-ja="アーキテクチャと技術構成" data-ko="아키텍처 및 기술 구성">アーキテクチャと技術構成</h2></div><p><span  data-ja="表示、業務ロジック、永続化を分離。" data-ko="화면·업무 로직·영속 계층을 분리했습니다.">表示、業務ロジック、永続化を分離。</span></p></div>
+<div class="architecture-grid"><div class="diagram"><div class="diagram-caption">REQUEST / SERVICE / DATA</div><div class="nodes">
+<div class="node"><span class="node-icon">▣</span><div><strong>Browser</strong><small>HTML · CSS · JavaScript</small></div></div><div class="node-arrow">↓ HTTP request</div>
+<div class="node"><span class="node-icon">↔</span><div><strong>JSP / Servlet / Filter</strong><small>Form · Session · Response</small></div></div><div class="node-arrow">↓ validation &amp; business rules</div>
+<div class="node"><span class="node-icon">▤</span><div><strong>EmployeeService</strong><small>Validation · Deadline · Audit · Version</small></div></div><div class="node-arrow">↓ repository abstraction</div>
+<div class="node"><span class="node-icon">≡</span><div><strong>DAO / JDBC</strong><small>PreparedStatement · Commit / Rollback</small></div></div><div class="node-arrow">↓ persistence</div>
+<div class="node database-node"><span class="node-icon">◉</span><div><strong>Oracle Database</strong><small>Employee · Visa · Renewal · Audit</small></div></div></div><p class="diagram-foot"><span  data-ja="DB接続なしで画面・処理を確認するためのDemo Repositoryも用意。DemoとOracleの切替は明示的です。" data-ko="DB 연결 없이 기능을 검증할 수 있는 Demo Repository도 있습니다. Demo와 Oracle 모드는 명시적으로 구분합니다.">DB接続なしで画面・処理を確認するためのDemo Repositoryも用意。DemoとOracleの切替は明示的です。</span></p></div>
+<div class="stack-block"><h3  data-ja="Technology Stack" data-ko="기술 스택">Technology Stack</h3><p><span  data-ja="コードとドキュメントで確認できた採用技術です。" data-ko="실제 코드와 문서에서 확인한 기술입니다.">コードとドキュメントで確認できた採用技術です。</span></p><div class="stack-list">
+<div><strong>Backend</strong><span>Java 17, Servlet, JSP</span></div>
+<div><strong>Data</strong><span>JDBC, Oracle, SQL</span></div>
+<div><strong>UI</strong><span>HTML, CSS, Vanilla JS</span></div>
+<div><strong>Localization</strong><span>ko · ja · en (.properties)</span></div>
+<div><strong>Web Runtime</strong><span>Tomcat 10.1 (target)</span></div>
+<div><strong>Quality</strong><span>JUnit-free Java tests, JSP mock, JDBC tests</span></div>
+</div><div class="stack-note"><strong><span  data-ja="実装上の工夫" data-ko="구현상의 특징">実装上の工夫</span></strong><p><span  data-ja="社員・在留・更新情報をひとつのサービス経由で処理し、DB保存時は監査履歴との整合性を守る構成です。" data-ko="직원·재류·갱신 정보를 하나의 서비스 계층으로 처리하고 DB 저장 시 변경 이력과 정합성을 유지하도록 설계했습니다.">社員・在留・更新情報をひとつのサービス経由で処理し、DB保存時は監査履歴との整合性を守る構成です。</span></p></div></div>
+</div></div></section>
+
+<section class="section screens" id="screens"><div class="shell"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 05 / UI WALKTHROUGH</div><h2  data-ja="実装画面ギャラリー" data-ko="구현 화면 갤러리">実装画面ギャラリー</h2></div><p><span  data-ja="右上のJP / KOを選ぶと、画面画像も対応する言語に切り替わります。" data-ko="상단 JP / KO를 선택하면 설명과 화면 이미지가 해당 언어로 함께 전환됩니다.">右上のJP / KOを選ぶと、画面画像も対応する言語に切り替わります。</span></p></div>
+<div class="gallery-controls" role="tablist" aria-label="Preview screens">
+<button class="gallery-tab is-active" role="tab" aria-selected="true" type="button" data-screen="0"><span  data-ja="社員一覧" data-ko="직원 목록">社員一覧</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="1"><span  data-ja="更新詳細" data-ko="갱신 상세">更新詳細</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="2"><span  data-ja="ダッシュボード" data-ko="대시보드">ダッシュボード</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="3"><span  data-ja="期限アラート" data-ko="만료 알림">期限アラート</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="4"><span  data-ja="登録フォーム" data-ko="등록 폼">登録フォーム</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="5"><span  data-ja="変更履歴" data-ko="변경 이력">変更履歴</span></button>
+<button class="gallery-tab" role="tab" aria-selected="false" type="button" data-screen="6"><span  data-ja="設定" data-ko="설정">設定</span></button>
+</div>
+<div class="gallery-layout"><div class="gallery-image-frame"><div class="gallery-framebar"><span class="traffic"><b></b><b></b><b></b></span><span id="gallery-path">/index.jsp</span><span>TEST RENDER</span></div><button class="gallery-open" id="open-image" type="button" aria-label="Open enlarged screenshot"><img id="gallery-image" src="assets/screens/list-ja.webp" alt="外国人社員一覧" width="1420" height="1265" loading="lazy"><span class="zoom-hint"><span  data-ja="拡大して見る ↗" data-ko="확대해서 보기 ↗">拡大して見る ↗</span></span></button></div>
+<div class="gallery-info"><span class="gallery-number" id="gallery-number">SCREEN 01 / 07</span><h3 id="gallery-title">外国人社員・在留管理台帳</h3><p id="gallery-desc">社員の在留資格、有効期限、絞り込み条件を一覧で管理する画面です。</p><div class="gallery-small-label">KEY ELEMENTS</div><div class="gallery-tags" id="gallery-tags"><span>JSP</span><span>Filter</span></div><p class="gallery-disclaimer"><span  data-ja="各画像は最終JSPコードをテスト用データでレンダリングした静的な記録です。実際のTomcat/Oracle接続の撮影ではありません。" data-ko="모든 이미지는 최종 JSP 코드를 테스트 데이터로 렌더링한 정적 기록입니다. 실제 Tomcat/Oracle 연결 화면을 촬영한 것은 아닙니다.">各画像は最終JSPコードをテスト用データでレンダリングした静的な記録です。実際のTomcat/Oracle接続の撮影ではありません。</span></p><div class="gallery-arrows"><button type="button" id="prev-screen" aria-label="Previous screen">←</button><button type="button" id="next-screen" aria-label="Next screen">→</button></div></div></div>
+</div></section>
+
+<section class="section status light-section" id="status"><div class="shell"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> 06 / EVIDENCE &amp; SCOPE</div><h2  data-ja="検証結果と実装範囲" data-ko="검증 결과와 구현 범위">検証結果と実装範囲</h2></div><p><span  data-ja="確認できた内容と、まだ確認できない内容を明確に分けています。" data-ko="확인한 내용과 아직 검증되지 않은 내용을 분명하게 구분합니다.">確認できた内容と、まだ確認できない内容を明確に分けています。</span></p></div>
+<div class="validation-strip"><div><strong>71</strong><span><span  data-ja="Coreテスト" data-ko="Core 테스트">Coreテスト</span></span></div><div><strong>99</strong><span><span  data-ja="検証・サービス" data-ko="검증·서비스">検証・サービス</span></span></div><div><strong>44</strong><span><span  data-ja="JDBC互換DBテスト" data-ko="JDBC 대체 DB 테스트">JDBC互換DBテスト</span></span></div><div><strong>50</strong><span><span  data-ja="JSPモックフロー" data-ko="JSP 모의 요청">JSPモックフロー</span></span></div></div>
+<p class="evidence-hint"><span  data-ja="同梱レポートに記載された合計264件の検証チェック。Oracle実DBやTomcat統合環境での264件の合格を意味しません。" data-ko="동봉된 테스트 보고서 기준 264개 검사 항목입니다. 실제 Oracle DB·Tomcat 통합 환경에서 264개가 통과했다는 의미는 아닙니다.">同梱レポートに記載された合計264件の検証チェック。Oracle実DBやTomcat統合環境での264件の合格を意味しません。</span></p>
+<div class="status-grid"><article class="status-card"><div class="status-card-head"><span class="status-mark ready">✓</span><h3  data-ja="ソースコード・テストで確認" data-ko="코드 및 테스트로 확인">ソースコード・テストで確認</h3></div><ul>
+<li><span  data-ja="社員CRUD、入力検証、重複処理と更新競合の判定" data-ko="직원 CRUD·입력 검증·중복 및 수정 충돌 검사">社員CRUD、入力検証、重複処理と更新競合の判定</span></li>
+<li><span  data-ja="期限フィルター、集計、検索・ページング、CSV" data-ko="만료 필터·통계·검색·페이지 나누기·CSV">期限フィルター、集計、検索・ページング、CSV</span></li>
+<li><span  data-ja="更新ワークフロー、監査ログ、原子的な保存処理" data-ko="갱신 업무·변경 이력·원자적 저장 처리">更新ワークフロー、監査ログ、原子的な保存処理</span></li>
+<li><span  data-ja="日本語・韓国語・英語の主要画面リソース" data-ko="일본어·한국어·영어 주요 화면 리소스">日本語・韓国語・英語の主要画面リソース</span></li></ul></article>
+<article class="status-card"><div class="status-card-head"><span class="status-mark todo">!</span><h3  data-ja="公開前の注意点" data-ko="공개 전 유의사항">公開前の注意点</h3></div><ul>
+<li><span  data-ja="実際のOracle接続およびTomcat/Jasper統合実行は未確認" data-ko="실제 Oracle 연결 및 Tomcat/Jasper 통합 실행 미검증">実際のOracle接続およびTomcat/Jasper統合実行は未確認</span></li>
+<li><span  data-ja="Demoモードのデータ・履歴はサーバー再起動で初期化" data-ko="Demo 모드 데이터·이력은 서버 재시작 시 초기화">Demoモードのデータ・履歴はサーバー再起動で初期化</span></li>
+<li><span  data-ja="簡易ログイン・お知らせ・チャットは本番向け完成機能ではない" data-ko="간이 로그인·공지·채팅은 운영용 완성 기능이 아님">簡易ログイン・お知らせ・チャットは本番向け完成機能ではない</span></li>
+<li><span  data-ja="外部公開前に認証・設定情報・モバイル画面の点検が必要" data-ko="외부 공개 전 인증·설정정보·모바일 화면 점검 필요">外部公開前に認証・設定情報・モバイル画面の点検が必要</span></li></ul></article></div>
+<div class="closing-card"><div><div class="eyebrow light">NEXT STEP / DEPLOYMENT</div><h3  data-ja="ソースの閲覧と、稼働デモは別のリンク。" data-ko="소스 확인과 실제 구동 사이트는 별개의 링크입니다.">ソースの閲覧と、稼働デモは別のリンク。</h3><p><span  data-ja="本ページは静的ポートフォリオです。アプリの実動作を試すには、安全な認証・接続設定を行ったTomcat/Oracleサーバーを別途公開する必要があります。" data-ko="이 페이지는 정적 포트폴리오입니다. 앱의 실제 작동을 체험하려면 안전한 인증·DB 설정을 갖춘 Tomcat/Oracle 서버를 별도 배포해야 합니다.">本ページは静的ポートフォリオです。アプリの実動作を試すには、安全な認証・接続設定を行ったTomcat/Oracleサーバーを別途公開する必要があります。</span></p></div><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://github.com/bizkh7/foreign-employee-management/tree/fix/project-integration">GitHub ↗</a></div>
+</div></section>
+</main>
+<footer class="footer"><div class="shell footer-row"><a href="#top" class="brand"><span class="brand-symbol">G<span class="brand-dot">.</span></span><span class="brand-copy"><strong>GlobalHR</strong><small>PROJECT PORTFOLIO</small></span></a><div class="footer-copy"><span><span  data-ja="チーム開発の技術ポートフォリオ · 2026" data-ko="팀 개발 기술 포트폴리오 · 2026">チーム開発の技術ポートフォリオ · 2026</span></span><span><span  data-ja="画像はテスト用データで生成 / 実運用画面ではありません" data-ko="이미지는 테스트용 데이터로 생성 / 실제 운영 화면 아님">画像はテスト用データで生成 / 実運用画面ではありません</span></span></div><a class="backtop" href="#top" aria-label="Back to top">↑</a></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden><button class="lightbox-close" type="button" id="close-lightbox" aria-label="Close preview">×</button><img id="lightbox-image" src="assets/screens/list-ja.webp" alt="Full size preview"></div>
+</body></html>
