@@ -1,0 +1,110 @@
+[
+  {
+    "key": "list",
+    "ja": "社員台帳・検索",
+    "ko": "직원 목록·검색",
+    "descJa": "氏名・国籍・在留資格・在籍状態で絞り込み、期限の近い順で確認。",
+    "descKo": "이름·국적·재류자격·재직 상태를 검색하고 만료 임박순으로 확인합니다.",
+    "category": "core",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "detail",
+    "ja": "在留資格・更新詳細",
+    "ko": "재류자격·갱신 상세",
+    "descJa": "在留情報、5段階の更新状況、書類・メモを一画面に集約。",
+    "descKo": "재류 정보, 5단계 갱신 상태, 서류와 메모를 한 화면에서 관리합니다.",
+    "category": "core",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "workflow",
+    "ja": "担当者・対応予定一覧",
+    "ko": "담당자·업무 일정 목록",
+    "descJa": "担当者・次回対応日・未割当・期限超過を業務一覧で把握。",
+    "descKo": "담당자·다음 조치일·미배정·일정 초과를 업무 목록에서 확인합니다.",
+    "category": "workflow",
+    "source": "SOURCE-BASED RECONSTRUCTION"
+  },
+  {
+    "key": "workflow-edit",
+    "ja": "担当者・更新日程の編集",
+    "ko": "담당자·갱신 일정 편집",
+    "descJa": "管理者が担当者を指定。担当人事職員は自分の案件の予定を更新。",
+    "descKo": "관리자가 담당자를 지정하고, 담당 인사직원은 본인 업무 일정을 수정합니다.",
+    "category": "workflow",
+    "source": "SOURCE-BASED RECONSTRUCTION"
+  },
+  {
+    "key": "users",
+    "ja": "ユーザー・権限管理",
+    "ko": "사용자·권한 관리",
+    "descJa": "ADMINが個人アカウント・役割・有効状態を管理。",
+    "descKo": "ADMIN이 개인 계정·역할·활성 상태를 관리합니다.",
+    "category": "security",
+    "source": "SOURCE-BASED RECONSTRUCTION"
+  },
+  {
+    "key": "login",
+    "ja": "ログイン画面",
+    "ko": "로그인 화면",
+    "descJa": "個人アカウントで認証。初回パスワード変更とセッション管理に対応。",
+    "descKo": "개인 계정 인증, 최초 비밀번호 변경 및 세션 관리를 지원합니다.",
+    "category": "security",
+    "source": "SOURCE-BASED RECONSTRUCTION"
+  },
+  {
+    "key": "alerts",
+    "ja": "期限アラート",
+    "ko": "만료 알림",
+    "descJa": "在留期限が近い社員や期限超過の社員を確認。",
+    "descKo": "재류 만료 임박 및 기한 경과 직원을 확인합니다.",
+    "category": "core",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "dashboard",
+    "ja": "集計ダッシュボード",
+    "ko": "통계 대시보드",
+    "descJa": "社員情報を状態別に集計し、対応優先度の把握を支援。",
+    "descKo": "직원 현황을 상태별로 집계해 업무 우선순위를 파악합니다.",
+    "category": "core",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "form",
+    "ja": "社員登録フォーム",
+    "ko": "직원 등록 폼",
+    "descJa": "必須項目・日付・重複社員番号をサーバー側で検証。",
+    "descKo": "필수값·날짜·중복 사번을 서버에서 검증합니다.",
+    "category": "core",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "audit",
+    "ja": "社員の変更履歴",
+    "ko": "직원 변경 이력",
+    "descJa": "誰が何を変更したかを記録。機密番号は生値を保存しない。",
+    "descKo": "누가 무엇을 바꿨는지 기록하며 민감한 번호의 원문은 이력에 남기지 않습니다.",
+    "category": "technical",
+    "source": "ORIGINAL UI / DEMO DATA"
+  },
+  {
+    "key": "security",
+    "ja": "アカウント操作ログ",
+    "ko": "계정 작업 로그",
+    "descJa": "ログイン・権限変更・パスワード再発行等の監査記録。",
+    "descKo": "로그인·권한 변경·비밀번호 재발급 등의 작업 이력을 기록합니다.",
+    "category": "security",
+    "source": "SOURCE-BASED RECONSTRUCTION"
+  },
+  {
+    "key": "settings",
+    "ja": "開発環境・接続確認",
+    "ko": "개발 환경·연결 확인",
+    "descJa": "アプリモードとDBの接続・テーブル状態を確認。",
+    "descKo": "애플리케이션 모드 및 DB 연결·테이블 상태를 확인합니다.",
+    "category": "technical",
+    "source": "ORIGINAL UI / DEMO DATA"
+  }
+]
