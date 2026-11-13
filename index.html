@@ -2214,7 +2214,7 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
 </main>
 
 <!-- ==================== INTERACTIVE SETTINGS MODAL ==================== -->
-<div aria-hidden="false" class="modal-backdrop open" id="settings-modal" role="dialog">
+<div aria-hidden="true" class="modal-backdrop" id="settings-modal" role="dialog">
   <div class="modal-box">
     <div class="modal-header">
       <h3 id="settings-title">🎬 YouTube 데모 링크 및 팀원 표기 설정</h3>
@@ -2592,7 +2592,16 @@ const TEAM_INFO = {
 
   document.getElementById('export-html-btn').addEventListener('click', () => {
     applySettingsFromInputs();
-    let src = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    // Export with settings and lightbox closed so the page never opens with a modal.
+    const exportDoc = document.documentElement.cloneNode(true);
+    ['settings-modal', 'lightbox-modal'].forEach(id => {
+      const modal = exportDoc.querySelector('#' + id);
+      if (modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+    let src = '<!DOCTYPE html>\n' + exportDoc.outerHTML;
     src = src.replace(/const VIDEO_LINKS = \{[\s\S]*?\};/, 'const VIDEO_LINKS = ' + JSON.stringify(VIDEO_LINKS, null, 2) + ';');
     src = src.replace(/const TEAM_INFO = \{[\s\S]*?\};/, 'const TEAM_INFO = ' + JSON.stringify(TEAM_INFO, null, 2) + ';');
     const blob = new Blob([src], { type: 'text/html;charset=utf-8' });
