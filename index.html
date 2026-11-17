@@ -277,15 +277,51 @@
   .sheet:last-child{break-after:auto;page-break-after:auto}
   .slide{box-shadow:none;transform:none!important;page-break-inside:avoid;break-inside:avoid}
 }
+
+/* GlobalHR supplied system-design blueprint: inserted slide 02 (JA / KO). */
+.blueprint-slide .slide-header {margin-bottom:13px}
+.blueprint-slide h2 {font-size:33px;line-height:1.26;margin:6px 0 6px}
+.blueprint-slide .subtitle {font-size:16px;line-height:1.5}
+.blueprint-panel {background:#0b1514;border:1px solid #709987;border-radius:12px;padding:11px 13px 13px;box-shadow:0 10px 24px #173e341e;cursor:zoom-in;overflow:hidden}
+.blueprint-panel-top {height:26px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#d8ee97;font-size:11px;font-weight:700;letter-spacing:.08em}
+.blueprint-panel-top span:last-child {font-size:10px;color:#c1d0c6;font-weight:500;letter-spacing:0}
+.blueprint-panel img {display:block;width:100%;height:500px;object-fit:contain;object-position:center;background:#000;border-radius:6px}
+.blueprint-tags {display:flex;gap:9px;flex-wrap:wrap;margin-top:11px}
+.blueprint-tags span {background:#eaf2e8;color:#28523d;border:1px solid #c6d9ca;border-radius:6px;padding:5px 11px;font-size:11.5px;font-weight:700}
+@media screen and (max-width:840px) {
+  .blueprint-slide .slide-header {margin-bottom:14px}
+  .blueprint-slide h2 {font-size:24px}
+  .blueprint-slide .subtitle {font-size:14px}
+  .blueprint-panel {padding:8px}
+  .blueprint-panel-top {height:auto;min-height:23px;flex-wrap:wrap;font-size:9px}
+  .blueprint-panel img {height:auto;max-height:none}
+  .blueprint-tags {gap:5px}
+  .blueprint-tags span {font-size:10px;padding:5px 7px}
+}
+
+/* GlobalHR architecture diagram — vector reconstruction of supplied source, page 02 */
+.blueprint-slide .blueprint-native {background:#f1f7f0;border-color:#b8d0bd;cursor:zoom-in;padding:8px 11px 10px}
+.blueprint-native .blueprint-panel-top{padding:0 6px;color:#285a42;height:24px}
+.blueprint-native .blueprint-panel-top span:last-child{color:#60776a}
+.blueprint-vector{display:block;width:100%;height:500px;border-radius:8px;background:#f8faf7;font-family:'Noto Sans CJK KR','Noto Sans CJK JP','Malgun Gothic','Yu Gothic','Meiryo',sans-serif;user-select:none}
+.blueprint-vector text{dominant-baseline:auto}
+.blueprint-slide .blueprint-tags{margin-top:9px}
+@media screen and (max-width:840px){
+ .blueprint-slide .blueprint-native{padding:8px}
+ .blueprint-vector{height:auto;min-width:700px}
+ .blueprint-slide .blueprint-native{overflow:auto}
+ .blueprint-slide .blueprint-panel-top{width:700px;min-width:700px}
+}
+
 </style>
 </head>
 <body data-lang="ja">
 <nav aria-label="Presentation navigation" class="toolbar">
   <a class="brand-control" href="#p01"><b>GH</b> GLOBALHR · TEAM PRESENTATION</a>
   <div class="controls">
-    <select aria-label="目次" id="contents"><option value="1">01 / 表紙 (GlobalHR 4人チーム)</option><option value="2">02 / 01 プロジェクト概要・目標</option><option value="3">03 / 02 4人メンバー紹介・役割</option><option value="4">04 / 03 機能別協業マトリクス</option><option value="5">05 / 04 システムアーキテクチャ</option><option value="6">06 / 05 データベース設計 (ERD)</option><option value="7">07 / 06 機能① 社員・在留資格台帳</option><option value="8">08 / 07 機能② 担当者・更新日程</option><option value="9">09 / 08 機能③ ログイン・RBAC権限</option><option value="10">10 / 09 機能④ 社員証明写真管理</option><option value="11">11 / 10 機能⑤ 国籍コード・多言語</option><option value="12">12 / 11 機能⑥ お知らせ掲示板・永続化</option><option value="13">13 / 12 Cloud DB移行・設定分離</option><option value="14">14 / 13 課題解決・チームワーク</option><option value="15">15 / 14 検証・自動テスト・Git履歴</option><option value="16">16 / 15 動画ハブ・振り返り・展望</option></select>
+    <select aria-label="目次" id="contents"><option value="1">01 / 表紙 (GlobalHR 4人チーム)</option><option value="2">02 / システム詳細設計図・処理フロー</option><option value="3">03 / 01 プロジェクト概要・目標</option><option value="4">04 / 02 4人メンバー紹介・役割</option><option value="5">05 / 03 機能別協業マトリクス</option><option value="6">06 / 04 システムアーキテクチャ</option><option value="7">07 / 05 データベース設計 (ERD)</option><option value="8">08 / 06 機能① 社員・在留資格台帳</option><option value="9">09 / 07 機能② 担当者・更新日程</option><option value="10">10 / 08 機能③ ログイン・RBAC権限</option><option value="11">11 / 09 機能④ 社員証明写真管理</option><option value="12">12 / 10 機能⑤ 国籍コード・多言語</option><option value="13">13 / 11 機能⑥ お知らせ掲示板・永続化</option><option value="14">14 / 12 Cloud DB移行・設定分離</option><option value="15">15 / 13 課題解決・チームワーク</option><option value="16">16 / 14 検証・自動テスト・Git履歴</option><option value="17">17 / 15 動画ハブ・振り返り・展望</option></select>
     <button aria-label="Previous slide" id="prev" type="button">←</button>
-    <span aria-live="polite" class="counter" id="counter">01 / 16</span>
+    <span aria-live="polite" class="counter" id="counter">01 / 17</span>
     <button aria-label="Next slide" id="next" type="button">→</button>
     <button aria-pressed="true" class="active" data-setlang="ja" type="button">JA (日本語)</button>
     <button aria-pressed="false" data-setlang="ko" type="button">KO (한국어)</button>
@@ -293,7 +329,7 @@
     <button class="print-button" id="print-btn" type="button">印刷 / PDF</button>
   </div>
 </nav>
-<div class="progress-bar" id="progress-bar" style="width: 6.25%;"></div>
+<div class="progress-bar" id="progress-bar" style="width: 5.88235294117647;"></div>
 
 <!-- ==================== JAPANESE DECK (DEFAULT) ==================== -->
 <main aria-label="Japanese presentation" class="deck active" data-lang="ja">
@@ -339,22 +375,49 @@
         </div>
         <p class="caption inverse">実際のプロジェクト画面キャプチャ（個人情報領域はマスク処理済み · クリックで拡大）</p>
         <div class="cover-index">
-          <a href="#ja-p02"><b>01</b><span>企画・4人紹介<br><small>概要・役割・設計</small></span><em>→</em></a>
-          <a href="#ja-p07"><b>02</b><span>6大核心機能<br><small>画面キャプチャ・動画</small></span><em>→</em></a>
-          <a href="#ja-p13"><b>03</b><span>基盤・検証・回顧<br><small>Cloud・課題解決・テスト</small></span><em>→</em></a>
+          <a href="#ja-p03"><b>01</b><span>企画・4人紹介<br><small>概要・役割・設計</small></span><em>→</em></a>
+          <a href="#ja-p08"><b>02</b><span>6大核心機能<br><small>画面キャプチャ・動画</small></span><em>→</em></a>
+          <a href="#ja-p14"><b>03</b><span>基盤・検証・回顧<br><small>Cloud・課題解決・テスト</small></span><em>→</em></a>
         </div>
       </div>
     </div>
   </div>
   <footer class="slide-footer">
     <div class="source">GlobalHR チーム発表資料 / Java 17 · Tomcat 10.1 · Oracle Cloud Autonomous Database</div>
-    <div class="folio"><strong>01</strong> / 16</div>
+    <div class="folio"><strong>01</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 02: PROJECT OVERVIEW -->
-<section class="sheet" data-page="2" id="ja-p02" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 02: SUPPLIED SYSTEM DETAIL DESIGN (ADDED; ORIGINAL SLIDES PRESERVED) -->
+<section class="sheet" data-page="2" id="ja-p02" style="--scale: 1;">
+<article class="slide blueprint-slide">
+  <header class="slide-header">
+    <div class="section">DESIGN DOCUMENT / SYSTEM ARCHITECTURE</div>
+    <h2>システム詳細設計：リクエスト処理とデータ連携</h2>
+    <p class="subtitle">ブラウザからTomcatの各層を経由してOracle Cloud Databaseへ接続する構成と、主要テーブル群を図示。</p>
+  </header>
+  <div class="page-content">
+    <div class="blueprint-panel blueprint-native" data-zoom-caption="GlobalHR システム詳細設計図（オリジナル構成を元に再設計）">
+      <div class="blueprint-panel-top"><span>GLOBALHR / SYSTEM DESIGN / LAYERED ARCHITECTURE</span><span>クリックしてベクター図を拡大</span></div>
+      <svg class="blueprint-vector" width="1320" height="500" viewBox="0 0 1320 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GlobalHR TOMCATサーバー JSP AuthFilter Servlet Service DAO JDBC Oracle Cloud Database"><defs>
+    <pattern id="bp-dot-ja" width="19" height="19" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#ceddd1" opacity=".75"/></pattern>
+    <marker id="bp-arrow-ja" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.8" markerHeight="5.8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#6f9c81" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <marker id="bp-arrow-white-ja" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#9fd1ae" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <linearGradient id="bp-client-ja" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#184b3b"/><stop offset="100%" stop-color="#102f29"/></linearGradient>
+ </defs><rect x="0.5" y="0.5" width="1319" height="499" rx="13" fill="#f8faf7" stroke="#c9dacd"/><rect x="1" y="1" width="1318" height="498" rx="13" fill="url(#bp-dot-ja)"/><path d="M 30 103 V 377" fill="none" stroke="#c7dacb" stroke-width="1.5" stroke-dasharray="3 7"/><path d="M 1290 103 V 377" fill="none" stroke="#c7dacb" stroke-width="1.5" stroke-dasharray="3 7"/><rect x="329" y="100" width="662" height="281" rx="14" fill="#e8f1e9" stroke="#b4cfbb" stroke-width="1.5"/><rect x="330" y="101" width="660" height="35" rx="14" fill="#dbeadc"/><rect x="330" y="124" width="660" height="16" fill="#dbeadc"/><circle cx="350" cy="118" r="4.5" fill="#548969"/><text x="365" y="123" class="" text-anchor="start" font-size="14.2" font-weight="700" fill="#1e4f39">TOMCATサーバー</text><text x="972" y="123" class="" text-anchor="end" font-size="10.4" font-weight="650" fill="#597b64">APPLICATION LAYERS</text><rect x="13" y="414" width="1294" height="81" rx="12" fill="#173e34" stroke="#416c56" stroke-width="1.4"/><rect x="14" y="415" width="1292" height="28" rx="11" fill="#1c493b"/><rect x="14" y="431" width="1292" height="13" fill="#1c493b"/><text x="33" y="434" class="" text-anchor="start" font-size="13.5" font-weight="700" fill="#e9f6e7">ORACLE CLOUD DATABASE</text><text x="1283" y="434" class="" text-anchor="end" font-size="10.5" font-weight="600" fill="#b5d8bf">主要データテーブル · 10領域</text><path d="M 660 51 V 134" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 660 164 V 176" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 660 211 V 224" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 660 264 V 279" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 527 248 H 488 Q 483 248 483 254 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 660 312 V 318 H 502 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 660 312 V 318 H 811 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><path d="M 812 371 V 413" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ja)"/><rect x="552" y="8" width="216" height="45" rx="11" fill="url(#bp-client-ja)"/><text x="660" y="24" class="" text-anchor="middle" font-size="9.7" font-weight="750" fill="#b8dbb7">CLIENT / WEB</text><text x="660" y="41" class="" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">ユーザーPC / Webブラウザ</text><rect x="612" y="67" width="96" height="23" rx="11.5" fill="#e3f2e5" stroke="#84b394"/><text x="660" y="82" class="" text-anchor="middle" font-size="11.1" font-weight="700" fill="#216044">HTTPリクエスト</text><g class="bp-node"><rect x="547" y="137" width="226" height="27" rx="10" fill="#ecf7ea" stroke="#90ba9c" stroke-width="1.3"/><path d="M 558 138 h 204" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="155.5" class="" text-anchor="middle" font-size="14.6" font-weight="750" fill="#173e34">JSP画面層</text></g><g class="bp-node"><rect x="543" y="177" width="234" height="34" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 554 178 h 212" stroke="#95c0a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="191" class="" text-anchor="middle" font-size="10" font-weight="650" fill="#698a79">AUTHFILTER</text><text x="660.0" y="208" class="" text-anchor="middle" font-size="13.4" font-weight="750" fill="#173e34">認証・権限・CSRF検証</text></g><g class="bp-node"><rect x="525" y="224" width="270" height="40" rx="10" fill="#ecf7ea" stroke="#90ba9c" stroke-width="1.3"/><path d="M 536 225 h 248" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="240" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">Servlet層</text><text x="660.0" y="255" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">Auth / Work / Notice / Photo</text></g><g class="bp-node"><rect x="552" y="279" width="216" height="37" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 563 280 h 194" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="295" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">Service層</text><text x="660.0" y="310" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">EmployeeService</text></g><g class="bp-node"><rect x="350" y="329" width="303" height="42" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 361 330 h 281" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="501.5" y="345" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">共通ユーティリティ</text><text x="501.5" y="360" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">AppConfig / I18n / Validation / CSV</text></g><g class="bp-node"><rect x="667" y="329" width="306" height="42" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 678 330 h 284" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="820.0" y="342" class="" text-anchor="middle" font-size="12.5" font-weight="700" fill="#173e34">Model・DAO層</text><text x="820.0" y="355" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">EmployeeDao / VisaDao /</text><text x="820.0" y="366" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">NoticeDao / UserDao</text></g><rect x="778" y="385" width="68" height="23" rx="11.5" fill="#ecf6ee" stroke="#92bda0"/><text x="812" y="401" class="" text-anchor="middle" font-size="11.4" font-weight="700" fill="#225c41">JDBC</text><rect x="26" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 37 454 H 134" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="85.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_RENEWAL</text><rect x="153" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 164 454 H 261" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="212.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMPLOYEE</text><rect x="280" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 291 454 H 388" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="339.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_NOTICE</text><rect x="407" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 418 454 H 515" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="466.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMP_PHOTO</text><rect x="534" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 545 454 H 642" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="593.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_VISA</text><rect x="661" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 672 454 H 769" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="720.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_SHORT_NOTICE</text><rect x="788" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 799 454 H 896" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="847.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_AUDIT_LOG</text><rect x="915" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 926 454 H 1023" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="974.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_APP_USER</text><rect x="1042" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 1053 454 H 1150" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="1101.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMP_WORK</text><rect x="1169" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 1180 454 H 1277" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="1228.5" y="465" class="" text-anchor="middle" font-size="9.4" font-weight="650" fill="#f2faf4">GHR_AUTH_EVENT</text><text x="1228.5" y="476" class="" text-anchor="middle" font-size="9.4" font-weight="650" fill="#f2faf4">GHR_AUTH_GUARD</text></svg>
+    </div>
+    <div class="blueprint-tags"><span>WEB / TOMCAT</span><span>JSP · AUTHFILTER · SERVLET</span><span>SERVICE / DAO / JDBC</span><span>ORACLE CLOUD DATABASE</span></div>
+  </div>
+  <footer class="slide-footer">
+    <div class="source">設計資料：原図の構成・接続関係を維持してGlobalHRデザインに合わせて再構成</div>
+    <div class="folio"><strong>02</strong> / 17</div>
+  </footer>
+</article>
+</section>
+
+<!-- SLIDE 03: PROJECT OVERVIEW -->
+<section class="sheet" data-page="3" id="ja-p03" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">01 / PROJECT OVERVIEW &amp; GOAL</div>
@@ -397,13 +460,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/util/ReferenceData.java / src/main/java/workflow/WorkRules.java / src/main/java/auth/AccessPolicy.java</div>
-    <div class="folio"><strong>02</strong> / 16</div>
+    <div class="folio"><strong>03</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 03: TEAM INTRODUCTION (4 MEMBERS WITH EMBEDDED PHOTOS & FULL NAMES) -->
-<section class="sheet" data-page="3" id="ja-p03" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 04: TEAM INTRODUCTION (4 MEMBERS WITH EMBEDDED PHOTOS & FULL NAMES) -->
+<section class="sheet" data-page="4" id="ja-p04" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">02 / TEAM INTRODUCTION &amp; ROLES</div>
@@ -460,13 +523,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">Git コミット履歴およびチーム役割分担表 / 顔写真（Base64内蔵）</div>
-    <div class="folio"><strong>03</strong> / 16</div>
+    <div class="folio"><strong>04</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 04: TEAM COLLABORATION & MODULE OWNERSHIP -->
-<section class="sheet" data-page="4" id="ja-p04" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 05: TEAM COLLABORATION & MODULE OWNERSHIP -->
+<section class="sheet" data-page="5" id="ja-p05" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">03 / TEAM COLLABORATION &amp; MODULE MATRIX</div>
@@ -540,13 +603,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">docs/TEAM_WORKFLOW_KO.md / docs/WORKFLOW_TEAM_MERGE_CHANGELOG_KO.md</div>
-    <div class="folio"><strong>04</strong> / 16</div>
+    <div class="folio"><strong>05</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 05: SYSTEM ARCHITECTURE -->
-<section class="sheet" data-page="5" id="ja-p05" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 06: SYSTEM ARCHITECTURE -->
+<section class="sheet" data-page="6" id="ja-p06" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">04 / SYSTEM ARCHITECTURE</div>
@@ -603,13 +666,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/config/AppConfig.java / src/main/java/model/DBM.java / src/main/java/model/AuthFilter.java</div>
-    <div class="folio"><strong>05</strong> / 16</div>
+    <div class="folio"><strong>06</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 06: DATABASE MODEL & ERD -->
-<section class="sheet" data-page="6" id="ja-p06" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 07: DATABASE MODEL & ERD -->
+<section class="sheet" data-page="7" id="ja-p07" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">05 / DATABASE DESIGN &amp; ERD</div>
@@ -671,13 +734,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">db/01_schema.sql · 04_audit_history.sql · 07_auth_rbac.sql · 09_assignment_dates.sql · 11_review_photo_nationality.sql</div>
-    <div class="folio"><strong>06</strong> / 16</div>
+    <div class="folio"><strong>07</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 07: FEATURE 01 - EMPLOYEE & VISA REGISTRY -->
-<section class="sheet" data-page="7" id="ja-p07" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 08: FEATURE 01 - EMPLOYEE & VISA REGISTRY -->
+<section class="sheet" data-page="8" id="ja-p08" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">06 / CORE FEATURE 01 — EMPLOYEE &amp; VISA REGISTRY</div>
@@ -711,13 +774,13 @@
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="employee">
-          <div class="video-stage"><iframe title="employee demo video" src="https://www.youtube-nocookie.com/embed/fvDo_cKX-J0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="employee demo video" src="https://www.youtube-nocookie.com/embed/9zKkUldnSmI" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 01 / DEMO VIDEO</span>
             <h3>社員・在留資格管理の動作デモ</h3>
             <p>新規社員登録 → 満了期限フィルター検索 → 詳細・退職処理 → CSV出力</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/fvDo_cKX-J0" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
+              <a class="video-open" href="https://youtu.be/9zKkUldnSmI" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
               <button class="video-set-btn" data-open-video="employee" type="button">🎬 YouTubeリンク設定</button>
             </div>
           </div>
@@ -731,13 +794,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">index.jsp / visaDetail.jsp / employeeSave.jsp / EmployeeService.java / EmployeeDao.java / VisaDao.java</div>
-    <div class="folio"><strong>07</strong> / 16</div>
+    <div class="folio"><strong>08</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 08: FEATURE 02 - ASSIGNEE & RENEWAL SCHEDULE WORKFLOW -->
-<section class="sheet" data-page="8" id="ja-p08" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 09: FEATURE 02 - ASSIGNEE & RENEWAL SCHEDULE WORKFLOW -->
+<section class="sheet" data-page="9" id="ja-p09" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">07 / CORE FEATURE 02 — ASSIGNEE &amp; RENEWAL WORKFLOW</div>
@@ -771,13 +834,13 @@
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="schedule">
-          <div class="video-stage"><iframe title="schedule demo video" src="https://www.youtube-nocookie.com/embed/Cbl6mCkflS8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="schedule demo video" src="https://www.youtube-nocookie.com/embed/3bNqNWVE2NE" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 02 / DEMO VIDEO</span>
             <h3>担当者・更新スケジュールの動作デモ</h3>
             <p>ADMINによる担当者指定 → HR担当者での日程入力 → 次回措置アラート確認</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/Cbl6mCkflS8" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
+              <a class="video-open" href="https://youtu.be/3bNqNWVE2NE" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
               <button class="video-set-btn" data-open-video="schedule" type="button">🎬 YouTubeリンク設定</button>
             </div>
           </div>
@@ -792,13 +855,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">db/09_assignment_dates.sql / controller/WorkServlet.java / workflow/WorkRepository.java / WEB-INF/workflow/*.jsp</div>
-    <div class="folio"><strong>08</strong> / 16</div>
+    <div class="folio"><strong>09</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 09: FEATURE 03 - LOGIN, RBAC & ACCOUNT SECURITY -->
-<section class="sheet" data-page="9" id="ja-p09" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 10: FEATURE 03 - LOGIN, RBAC & ACCOUNT SECURITY -->
+<section class="sheet" data-page="10" id="ja-p10" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">08 / CORE FEATURE 03 — LOGIN, RBAC &amp; SECURITY</div>
@@ -853,13 +916,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">login.jsp / loginProcess.jsp / UserDao.java / AuthFilter.java / AccessPolicy.java / AuthRepository.java</div>
-    <div class="folio"><strong>09</strong> / 16</div>
+    <div class="folio"><strong>10</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 10: FEATURE 04 - EMPLOYEE PROFILE PHOTO -->
-<section class="sheet" data-page="10" id="ja-p10" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 11: FEATURE 04 - EMPLOYEE PROFILE PHOTO -->
+<section class="sheet" data-page="11" id="ja-p11" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">09 / CORE FEATURE 04 — EMPLOYEE PROFILE PHOTO</div>
@@ -893,13 +956,13 @@
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="photo">
-          <div class="video-stage"><iframe title="photo demo video" src="https://www.youtube-nocookie.com/embed/pwNZjg1YI9E" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="photo demo video" src="https://www.youtube-nocookie.com/embed/r9HSCM53z8I" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 04 / DEMO VIDEO</span>
             <h3>社員証明写真の登録・変更・削除デモ</h3>
             <p>画像選択・プレビュー → アップロード正規化 → 詳細画面表示 → 差し替え・削除</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/pwNZjg1YI9E" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
+              <a class="video-open" href="https://youtu.be/r9HSCM53z8I" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
               <button class="video-set-btn" data-open-video="photo" type="button">🎬 YouTubeリンク設定</button>
             </div>
           </div>
@@ -912,13 +975,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/controller/PhotoServlet.java / photo/PhotoCodec.java / photo/PhotoRepository.java / WEB-INF/photo/manage.jsp</div>
-    <div class="folio"><strong>10</strong> / 16</div>
+    <div class="folio"><strong>11</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 11: FEATURE 05 - NATIONALITY & MULTILINGUAL UI -->
-<section class="sheet" data-page="11" id="ja-p11" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 12: FEATURE 05 - NATIONALITY & MULTILINGUAL UI -->
+<section class="sheet" data-page="12" id="ja-p12" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">10 / CORE FEATURE 05 — NATIONALITY &amp; MULTILINGUAL UI</div>
@@ -952,13 +1015,13 @@
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="nationality">
-          <div class="video-stage"><iframe title="nationality demo video" src="https://www.youtube-nocookie.com/embed/FksGJU7idzY" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="nationality demo video" src="https://www.youtube-nocookie.com/embed/ln6gWVurbE8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 05 / DEMO VIDEO</span>
             <h3>国籍コード選択・多言語切替の動作デモ</h3>
             <p>主要10か国選択 / その他入力 → 保存 → KO / JA / EN 言語切替確認</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/FksGJU7idzY" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
+              <a class="video-open" href="https://youtu.be/ln6gWVurbE8" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
               <button class="video-set-btn" data-open-video="nationality" type="button">🎬 YouTubeリンク設定</button>
             </div>
           </div>
@@ -972,13 +1035,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/util/Nationality.java / util/I18n.java / model/EmployeeValidator.java / src/main/resources/i18n/*.properties</div>
-    <div class="folio"><strong>11</strong> / 16</div>
+    <div class="folio"><strong>12</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 12: FEATURE 06 - NOTICE BOARD, SHORT NOTICE & DB PERSISTENCE -->
-<section class="sheet" data-page="12" id="ja-p12" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 13: FEATURE 06 - NOTICE BOARD, SHORT NOTICE & DB PERSISTENCE -->
+<section class="sheet" data-page="13" id="ja-p13" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">11 / CORE FEATURE 06 — NOTICE BOARD &amp; DATA PERSISTENCE</div>
@@ -1012,13 +1075,13 @@
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="notice">
-          <div class="video-stage"><iframe title="notice demo video" src="https://www.youtube-nocookie.com/embed/hjFWe3gq5dM" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="notice demo video" src="https://www.youtube-nocookie.com/embed/y8ZBFm5kSLk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 06 / DEMO VIDEO</span>
             <h3>お知らせ掲示板・ショート通知・DB永続化デモ</h3>
             <p>ADMINによるお知らせ投稿・編集 → ショート通知登録 → 別PC・再起動後の保持確認</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/hjFWe3gq5dM" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
+              <a class="video-open" href="https://youtu.be/y8ZBFm5kSLk" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTubeで開く ↗</a>
               <button class="video-set-btn" data-open-video="notice" type="button">🎬 YouTubeリンク設定</button>
             </div>
           </div>
@@ -1029,13 +1092,13 @@
   </div>
   <footer class="slide-footer">
     <div class="source">notice.jsp / noticeForm.jsp / noticeView.jsp / NoticeServlet.java / NoticeDao.java / ChatDao.java / chatSave.jsp</div>
-    <div class="folio"><strong>12</strong> / 16</div>
+    <div class="folio"><strong>13</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 13: CLOUD DB MIGRATION & APPCONFIG -->
-<section class="sheet" data-page="13" id="ja-p13" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 14: CLOUD DB MIGRATION & APPCONFIG -->
+<section class="sheet" data-page="14" id="ja-p14" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">12 / CLOUD DB MIGRATION &amp; CONFIGURATION</div>
@@ -1089,13 +1152,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/config/AppConfig.java / src/main/java/model/DBM.java / docs/DATABASE_KO.md</div>
-    <div class="folio"><strong>13</strong> / 16</div>
+    <div class="folio"><strong>14</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 14: TROUBLESHOOTING & TEAMWORK -->
-<section class="sheet" data-page="14" id="ja-p14" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 15: TROUBLESHOOTING & TEAMWORK -->
+<section class="sheet" data-page="15" id="ja-p15" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">13 / TROUBLESHOOTING &amp; TEAMWORK</div>
@@ -1138,13 +1201,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">docs/TEAM_WORKFLOW_KO.md / docs/CHANGELOG_KO.md / .classpath / .settings/org.eclipse.jdt.core.prefs</div>
-    <div class="folio"><strong>14</strong> / 16</div>
+    <div class="folio"><strong>15</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 15: VERIFICATION & TESTING EVIDENCE -->
-<section class="sheet" data-page="15" id="ja-p15" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 16: VERIFICATION & TESTING EVIDENCE -->
+<section class="sheet" data-page="16" id="ja-p16" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">14 / VERIFICATION &amp; TESTING EVIDENCE</div>
@@ -1181,13 +1244,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">tools/test-all.py / docs/TEST_REPORT.md / docs/AUTH_TEST_REPORT.md / docs/WORKFLOW_TEST_REPORT.md</div>
-    <div class="folio"><strong>15</strong> / 16</div>
+    <div class="folio"><strong>16</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 16: DEMO VIDEO HUB & PROJECT RETROSPECTIVE -->
-<section class="sheet" data-page="16" id="ja-p16" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 17: DEMO VIDEO HUB & PROJECT RETROSPECTIVE -->
+<section class="sheet" data-page="17" id="ja-p17" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">15 / DEMO VIDEO HUB &amp; PROJECT RETROSPECTIVE</div>
@@ -1199,32 +1262,32 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       <div class="hub-card">
         <div class="hub-top"><strong>① 社員・在留資格管理</strong><span class="hub-status ready" data-hub-status="employee">動画登録済</span></div>
         <p>社員登録、満了30/60/90日フィルター、退職処理、CSV出力</p>
-        <div class="tags"><a class="tag" href="#ja-p07">スライド 07へ →</a><button class="tag" data-open-video="employee" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p08">スライド 08へ →</a><button class="tag" data-open-video="employee" type="button">🎬 YouTube設定</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>② 担当者・更新日程</strong><span class="hub-status ready" data-hub-status="schedule">動画登録済</span></div>
         <p>担当者指定、申請日・完了日・次回措置予定日、楽観的ロック</p>
-        <div class="tags"><a class="tag" href="#ja-p08">スライド 08へ →</a><button class="tag" data-open-video="schedule" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p09">スライド 09へ →</a><button class="tag" data-open-video="schedule" type="button">🎬 YouTube設定</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>③ ログイン・RBAC権限</strong><span class="hub-status ready" data-hub-status="auth">動画登録済</span></div>
         <p>個人アカウント認証、ADMIN/HR_STAFF権限比較、即時失効</p>
-        <div class="tags"><a class="tag" href="#ja-p09">スライド 09へ →</a><button class="tag" data-open-video="auth" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p10">スライド 10へ →</a><button class="tag" data-open-video="auth" type="button">🎬 YouTube設定</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>④ 社員証明写真管理</strong><span class="hub-status ready" data-hub-status="photo">動画登録済</span></div>
         <p>JPG/PNG検証、600×800 JPEG正規化、EXIF除去、BLOB保存</p>
-        <div class="tags"><a class="tag" href="#ja-p10">スライド 10へ →</a><button class="tag" data-open-video="photo" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p11">スライド 11へ →</a><button class="tag" data-open-video="photo" type="button">🎬 YouTube設定</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>⑤ 国籍コード・多言語UI</strong><span class="hub-status ready" data-hub-status="nationality">動画登録済</span></div>
         <p>主要10か国＋その他入力、ISOコード保存、KO/JA/EN切替</p>
-        <div class="tags"><a class="tag" href="#ja-p11">スライド 11へ →</a><button class="tag" data-open-video="nationality" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p12">スライド 12へ →</a><button class="tag" data-open-video="nationality" type="button">🎬 YouTube設定</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>⑥ お知らせ掲示板・永続化</strong><span class="hub-status ready" data-hub-status="notice">動画登録済</span></div>
         <p>GHR_NOTICE / SHORT_NOTICE永続化、ROW_VERSION競合防止</p>
-        <div class="tags"><a class="tag" href="#ja-p12">スライド 12へ →</a><button class="tag" data-open-video="notice" type="button">🎬 YouTube設定</button></div>
+        <div class="tags"><a class="tag" href="#ja-p13">スライド 13へ →</a><button class="tag" data-open-video="notice" type="button">🎬 YouTube設定</button></div>
       </div>
     </div>
     <div class="reflection-bottom">
@@ -1247,7 +1310,7 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">GlobalHR 4人チームプロジェクト発表資料（金 侊賢 · 安 成珉 · 李 縡泉 · 薛 秀炫）</div>
-    <div class="folio"><strong>16</strong> / 16</div>
+    <div class="folio"><strong>17</strong> / 17</div>
   </footer>
 </article>
 </section>
@@ -1298,22 +1361,49 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
         </div>
         <p class="caption inverse">실제 프로젝트 실행 화면 캡처 (개인정보 영역 마스킹 처리 · 클릭 시 확대)</p>
         <div class="cover-index">
-          <a href="#ko-p02"><b>01</b><span>기획·4인 팀 소개<br><small>개요·역할·설계</small></span><em>→</em></a>
-          <a href="#ko-p07"><b>02</b><span>6대 핵심 기능<br><small>화면 캡처·시연 영상</small></span><em>→</em></a>
-          <a href="#ko-p13"><b>03</b><span>기반·검증·회고<br><small>Cloud·문제 해결·테스트</small></span><em>→</em></a>
+          <a href="#ko-p03"><b>01</b><span>기획·4인 팀 소개<br><small>개요·역할·설계</small></span><em>→</em></a>
+          <a href="#ko-p08"><b>02</b><span>6대 핵심 기능<br><small>화면 캡처·시연 영상</small></span><em>→</em></a>
+          <a href="#ko-p14"><b>03</b><span>기반·검증·회고<br><small>Cloud·문제 해결·테스트</small></span><em>→</em></a>
         </div>
       </div>
     </div>
   </div>
   <footer class="slide-footer">
     <div class="source">GlobalHR 4인 팀 발표 자료 / Java 17 · Tomcat 10.1 · Oracle Cloud Autonomous Database</div>
-    <div class="folio"><strong>01</strong> / 16</div>
+    <div class="folio"><strong>01</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 02: PROJECT OVERVIEW -->
-<section class="sheet" data-page="2" id="ko-p02" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 02: SUPPLIED SYSTEM DETAIL DESIGN (ADDED; ORIGINAL SLIDES PRESERVED) -->
+<section class="sheet" data-page="2" id="ko-p02" style="--scale: 1;">
+<article class="slide blueprint-slide">
+  <header class="slide-header">
+    <div class="section">DESIGN DOCUMENT / SYSTEM ARCHITECTURE</div>
+    <h2>시스템 상세 설계: 요청 처리 및 데이터 연동 구조</h2>
+    <p class="subtitle">브라우저에서 Tomcat의 각 계층을 거쳐 Oracle Cloud Database로 연결되는 흐름과 주요 테이블 구조를 정리했습니다.</p>
+  </header>
+  <div class="page-content">
+    <div class="blueprint-panel blueprint-native" data-zoom-caption="GlobalHR 시스템 상세 설계도 (원본 구조를 바탕으로 재구성)">
+      <div class="blueprint-panel-top"><span>GLOBALHR / SYSTEM DESIGN / LAYERED ARCHITECTURE</span><span>클릭하면 벡터 설계도 확대</span></div>
+      <svg class="blueprint-vector" width="1320" height="500" viewBox="0 0 1320 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GlobalHR TOMCAT 서버 JSP AuthFilter Servlet Service DAO JDBC Oracle Cloud Database"><defs>
+    <pattern id="bp-dot-ko" width="19" height="19" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#ceddd1" opacity=".75"/></pattern>
+    <marker id="bp-arrow-ko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.8" markerHeight="5.8" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#6f9c81" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <marker id="bp-arrow-white-ko" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#9fd1ae" stroke-width="1.6" stroke-linejoin="round"/></marker>
+    <linearGradient id="bp-client-ko" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#184b3b"/><stop offset="100%" stop-color="#102f29"/></linearGradient>
+ </defs><rect x="0.5" y="0.5" width="1319" height="499" rx="13" fill="#f8faf7" stroke="#c9dacd"/><rect x="1" y="1" width="1318" height="498" rx="13" fill="url(#bp-dot-ko)"/><path d="M 30 103 V 377" fill="none" stroke="#c7dacb" stroke-width="1.5" stroke-dasharray="3 7"/><path d="M 1290 103 V 377" fill="none" stroke="#c7dacb" stroke-width="1.5" stroke-dasharray="3 7"/><rect x="329" y="100" width="662" height="281" rx="14" fill="#e8f1e9" stroke="#b4cfbb" stroke-width="1.5"/><rect x="330" y="101" width="660" height="35" rx="14" fill="#dbeadc"/><rect x="330" y="124" width="660" height="16" fill="#dbeadc"/><circle cx="350" cy="118" r="4.5" fill="#548969"/><text x="365" y="123" class="" text-anchor="start" font-size="14.2" font-weight="700" fill="#1e4f39">TOMCAT 서버</text><text x="972" y="123" class="" text-anchor="end" font-size="10.4" font-weight="650" fill="#597b64">APPLICATION LAYERS</text><rect x="13" y="414" width="1294" height="81" rx="12" fill="#173e34" stroke="#416c56" stroke-width="1.4"/><rect x="14" y="415" width="1292" height="28" rx="11" fill="#1c493b"/><rect x="14" y="431" width="1292" height="13" fill="#1c493b"/><text x="33" y="434" class="" text-anchor="start" font-size="13.5" font-weight="700" fill="#e9f6e7">ORACLE CLOUD DATABASE</text><text x="1283" y="434" class="" text-anchor="end" font-size="10.5" font-weight="600" fill="#b5d8bf">주요 데이터 테이블 · 10개 영역</text><path d="M 660 51 V 134" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 660 164 V 176" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 660 211 V 224" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 660 264 V 279" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 527 248 H 488 Q 483 248 483 254 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 660 312 V 318 H 502 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 660 312 V 318 H 811 V 328" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><path d="M 812 371 V 413" fill="none" stroke="#6f9c81" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#bp-arrow-ko)"/><rect x="552" y="8" width="216" height="45" rx="11" fill="url(#bp-client-ko)"/><text x="660" y="24" class="" text-anchor="middle" font-size="9.7" font-weight="750" fill="#b8dbb7">CLIENT / WEB</text><text x="660" y="41" class="" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">사용자 PC / 웹 브라우저</text><rect x="612" y="67" width="96" height="23" rx="11.5" fill="#e3f2e5" stroke="#84b394"/><text x="660" y="82" class="" text-anchor="middle" font-size="11.1" font-weight="700" fill="#216044">HTTP 요청</text><g class="bp-node"><rect x="547" y="137" width="226" height="27" rx="10" fill="#ecf7ea" stroke="#90ba9c" stroke-width="1.3"/><path d="M 558 138 h 204" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="155.5" class="" text-anchor="middle" font-size="14.6" font-weight="750" fill="#173e34">JSP 화면 계층</text></g><g class="bp-node"><rect x="543" y="177" width="234" height="34" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 554 178 h 212" stroke="#95c0a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="191" class="" text-anchor="middle" font-size="10" font-weight="650" fill="#698a79">AUTHFILTER</text><text x="660.0" y="208" class="" text-anchor="middle" font-size="13.4" font-weight="750" fill="#173e34">인증 · 권한 · CSRF 검증</text></g><g class="bp-node"><rect x="525" y="224" width="270" height="40" rx="10" fill="#ecf7ea" stroke="#90ba9c" stroke-width="1.3"/><path d="M 536 225 h 248" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="240" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">Servlet 계층</text><text x="660.0" y="255" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">Auth / Work / Notice / Photo</text></g><g class="bp-node"><rect x="552" y="279" width="216" height="37" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 563 280 h 194" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="660.0" y="295" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">Service 계층</text><text x="660.0" y="310" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">EmployeeService</text></g><g class="bp-node"><rect x="350" y="329" width="303" height="42" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 361 330 h 281" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="501.5" y="345" class="" text-anchor="middle" font-size="13.2" font-weight="700" fill="#173e34">공통 유틸리티</text><text x="501.5" y="360" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">AppConfig / I18n / Validation / CSV</text></g><g class="bp-node"><rect x="667" y="329" width="306" height="42" rx="10" fill="#ffffff" stroke="#cbdcd0" stroke-width="1.3"/><path d="M 678 330 h 284" stroke="#8ab7a0" stroke-width="2" stroke-linecap="round"/><text x="820.0" y="342" class="" text-anchor="middle" font-size="12.5" font-weight="700" fill="#173e34">Model · DAO 계층</text><text x="820.0" y="355" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">EmployeeDao / VisaDao /</text><text x="820.0" y="366" class="" text-anchor="middle" font-size="10.5" font-weight="550" fill="#486b59">NoticeDao / UserDao</text></g><rect x="778" y="385" width="68" height="23" rx="11.5" fill="#ecf6ee" stroke="#92bda0"/><text x="812" y="401" class="" text-anchor="middle" font-size="11.4" font-weight="700" fill="#225c41">JDBC</text><rect x="26" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 37 454 H 134" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="85.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_RENEWAL</text><rect x="153" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 164 454 H 261" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="212.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMPLOYEE</text><rect x="280" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 291 454 H 388" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="339.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_NOTICE</text><rect x="407" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 418 454 H 515" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="466.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMP_PHOTO</text><rect x="534" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 545 454 H 642" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="593.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_VISA</text><rect x="661" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 672 454 H 769" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="720.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_SHORT_NOTICE</text><rect x="788" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 799 454 H 896" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="847.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_AUDIT_LOG</text><rect x="915" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 926 454 H 1023" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="974.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_APP_USER</text><rect x="1042" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 1053 454 H 1150" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="1101.5" y="471" class="" text-anchor="middle" font-size="10.1" font-weight="650" fill="#f2faf4">GHR_EMP_WORK</text><rect x="1169" y="449" width="119" height="35" rx="7" fill="#2a5b48" stroke="#548368" stroke-width="1"/><path d="M 1180 454 H 1277" stroke="#7faf90" stroke-width="1" opacity=".8"/><text x="1228.5" y="465" class="" text-anchor="middle" font-size="9.4" font-weight="650" fill="#f2faf4">GHR_AUTH_EVENT</text><text x="1228.5" y="476" class="" text-anchor="middle" font-size="9.4" font-weight="650" fill="#f2faf4">GHR_AUTH_GUARD</text></svg>
+    </div>
+    <div class="blueprint-tags"><span>WEB / TOMCAT</span><span>JSP · AUTHFILTER · SERVLET</span><span>SERVICE / DAO / JDBC</span><span>ORACLE CLOUD DATABASE</span></div>
+  </div>
+  <footer class="slide-footer">
+    <div class="source">설계 자료: 원본 구성과 연결 관계를 유지하여 GlobalHR 스타일로 재구성</div>
+    <div class="folio"><strong>02</strong> / 17</div>
+  </footer>
+</article>
+</section>
+
+<!-- SLIDE 03: PROJECT OVERVIEW -->
+<section class="sheet" data-page="3" id="ko-p03" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">01 / 프로젝트 개요 및 비즈니스 목표</div>
@@ -1356,13 +1446,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/util/ReferenceData.java / src/main/java/workflow/WorkRules.java / src/main/java/auth/AccessPolicy.java</div>
-    <div class="folio"><strong>02</strong> / 16</div>
+    <div class="folio"><strong>03</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 03: TEAM INTRODUCTION -->
-<section class="sheet" data-page="3" id="ko-p03" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 04: TEAM INTRODUCTION -->
+<section class="sheet" data-page="4" id="ko-p04" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">02 / 4인 팀원 소개 및 역할 분담</div>
@@ -1419,13 +1509,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">Git 커밋 이력 및 팀 역할 분담표 / 프로필 사진 (Base64 내장)</div>
-    <div class="folio"><strong>03</strong> / 16</div>
+    <div class="folio"><strong>04</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 04: TEAM COLLABORATION & MODULE MATRIX -->
-<section class="sheet" data-page="4" id="ko-p04" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 05: TEAM COLLABORATION & MODULE MATRIX -->
+<section class="sheet" data-page="5" id="ko-p05" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">03 / 팀 협업 방식 및 모듈별 분담 매트릭스</div>
@@ -1499,13 +1589,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">docs/TEAM_WORKFLOW_KO.md / docs/WORKFLOW_TEAM_MERGE_CHANGELOG_KO.md</div>
-    <div class="folio"><strong>04</strong> / 16</div>
+    <div class="folio"><strong>05</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 05: SYSTEM ARCHITECTURE -->
-<section class="sheet" data-page="5" id="ko-p05" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 06: SYSTEM ARCHITECTURE -->
+<section class="sheet" data-page="6" id="ko-p06" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">04 / 시스템 아키텍처</div>
@@ -1562,13 +1652,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/config/AppConfig.java / src/main/java/model/DBM.java / src/main/java/model/AuthFilter.java</div>
-    <div class="folio"><strong>05</strong> / 16</div>
+    <div class="folio"><strong>06</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 06: DATABASE MODEL & ERD -->
-<section class="sheet" data-page="6" id="ko-p06" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 07: DATABASE MODEL & ERD -->
+<section class="sheet" data-page="7" id="ko-p07" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">05 / 데이터베이스 설계 및 ERD</div>
@@ -1630,13 +1720,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">db/01_schema.sql · 04_audit_history.sql · 07_auth_rbac.sql · 09_assignment_dates.sql · 11_review_photo_nationality.sql</div>
-    <div class="folio"><strong>06</strong> / 16</div>
+    <div class="folio"><strong>07</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 07: FEATURE 01 - EMPLOYEE & VISA REGISTRY -->
-<section class="sheet" data-page="7" id="ko-p07" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 08: FEATURE 01 - EMPLOYEE & VISA REGISTRY -->
+<section class="sheet" data-page="8" id="ko-p08" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">06 / 핵심 기능 01 — 사원·체류자격 대장 관리</div>
@@ -1670,13 +1760,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="employee">
-          <div class="video-stage"><iframe title="employee demo video" src="https://www.youtube-nocookie.com/embed/fvDo_cKX-J0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="employee demo video" src="https://www.youtube-nocookie.com/embed/9zKkUldnSmI" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 01 / DEMO VIDEO</span>
             <h3>사원·체류자격 관리 시연 영상</h3>
             <p>신규 사원 등록 → 만료기한 필터 검색 → 상세·퇴사 처리 → CSV 출력</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/fvDo_cKX-J0" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
+              <a class="video-open" href="https://youtu.be/9zKkUldnSmI" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
               <button class="video-set-btn" data-open-video="employee" type="button">🎬 YouTube 링크 설정</button>
             </div>
           </div>
@@ -1690,13 +1780,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">index.jsp / visaDetail.jsp / employeeSave.jsp / EmployeeService.java / EmployeeDao.java / VisaDao.java</div>
-    <div class="folio"><strong>07</strong> / 16</div>
+    <div class="folio"><strong>08</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 08: FEATURE 02 - ASSIGNEE & RENEWAL SCHEDULE WORKFLOW -->
-<section class="sheet" data-page="8" id="ko-p08" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 09: FEATURE 02 - ASSIGNEE & RENEWAL SCHEDULE WORKFLOW -->
+<section class="sheet" data-page="9" id="ko-p09" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">07 / 핵심 기능 02 — 담당자 배정 및 체류갱신 일정</div>
@@ -1730,13 +1820,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="schedule">
-          <div class="video-stage"><iframe title="schedule demo video" src="https://www.youtube-nocookie.com/embed/Cbl6mCkflS8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="schedule demo video" src="https://www.youtube-nocookie.com/embed/3bNqNWVE2NE" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 02 / DEMO VIDEO</span>
             <h3>담당자·갱신 스케줄 시연 영상</h3>
             <p>ADMIN 담당자 지정 → HR 담당자 일정 입력 → 다음 조치 알림 확인</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/Cbl6mCkflS8" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
+              <a class="video-open" href="https://youtu.be/3bNqNWVE2NE" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
               <button class="video-set-btn" data-open-video="schedule" type="button">🎬 YouTube 링크 설정</button>
             </div>
           </div>
@@ -1751,13 +1841,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">db/09_assignment_dates.sql / controller/WorkServlet.java / workflow/WorkRepository.java / WEB-INF/workflow/*.jsp</div>
-    <div class="folio"><strong>08</strong> / 16</div>
+    <div class="folio"><strong>09</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 09: FEATURE 03 - LOGIN, RBAC & SECURITY -->
-<section class="sheet" data-page="9" id="ko-p09" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 10: FEATURE 03 - LOGIN, RBAC & SECURITY -->
+<section class="sheet" data-page="10" id="ko-p10" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">08 / 핵심 기능 03 — 로그인·역할 기반 권한(RBAC) 및 보안</div>
@@ -1812,13 +1902,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">login.jsp / loginProcess.jsp / UserDao.java / AuthFilter.java / AccessPolicy.java / AuthRepository.java</div>
-    <div class="folio"><strong>09</strong> / 16</div>
+    <div class="folio"><strong>10</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 10: FEATURE 04 - EMPLOYEE PROFILE PHOTO -->
-<section class="sheet" data-page="10" id="ko-p10" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 11: FEATURE 04 - EMPLOYEE PROFILE PHOTO -->
+<section class="sheet" data-page="11" id="ko-p11" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">09 / 핵심 기능 04 — 사원 증명사진 관리</div>
@@ -1852,13 +1942,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="photo">
-          <div class="video-stage"><iframe title="photo demo video" src="https://www.youtube-nocookie.com/embed/pwNZjg1YI9E" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="photo demo video" src="https://www.youtube-nocookie.com/embed/r9HSCM53z8I" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 04 / DEMO VIDEO</span>
             <h3>사원 증명사진 등록·교체·삭제 시연 영상</h3>
             <p>이미지 선택·미리보기 → 업로드 정규화 → 상세 화면 표시 → 교체 및 삭제</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/pwNZjg1YI9E" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
+              <a class="video-open" href="https://youtu.be/r9HSCM53z8I" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
               <button class="video-set-btn" data-open-video="photo" type="button">🎬 YouTube 링크 설정</button>
             </div>
           </div>
@@ -1871,13 +1961,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/controller/PhotoServlet.java / photo/PhotoCodec.java / photo/PhotoRepository.java / WEB-INF/photo/manage.jsp</div>
-    <div class="folio"><strong>10</strong> / 16</div>
+    <div class="folio"><strong>11</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 11: FEATURE 05 - NATIONALITY & MULTILINGUAL UI -->
-<section class="sheet" data-page="11" id="ko-p11" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 12: FEATURE 05 - NATIONALITY & MULTILINGUAL UI -->
+<section class="sheet" data-page="12" id="ko-p12" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">10 / 핵심 기능 05 — 국적 코드 표준화 및 다국어(KO/JA/EN) UI</div>
@@ -1911,13 +2001,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="nationality">
-          <div class="video-stage"><iframe title="nationality demo video" src="https://www.youtube-nocookie.com/embed/FksGJU7idzY" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="nationality demo video" src="https://www.youtube-nocookie.com/embed/ln6gWVurbE8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 05 / DEMO VIDEO</span>
             <h3>국적 코드 선택·다국어 전환 시연 영상</h3>
             <p>주요 10개국 선택 / 기타 입력 → 저장 → KO / JA / EN 언어 전환 확인</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/FksGJU7idzY" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
+              <a class="video-open" href="https://youtu.be/ln6gWVurbE8" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
               <button class="video-set-btn" data-open-video="nationality" type="button">🎬 YouTube 링크 설정</button>
             </div>
           </div>
@@ -1931,13 +2021,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/util/Nationality.java / util/I18n.java / model/EmployeeValidator.java / src/main/resources/i18n/*.properties</div>
-    <div class="folio"><strong>11</strong> / 16</div>
+    <div class="folio"><strong>12</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 12: FEATURE 06 - NOTICE BOARD, SHORT NOTICE & DB PERSISTENCE -->
-<section class="sheet" data-page="12" id="ko-p12" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 13: FEATURE 06 - NOTICE BOARD, SHORT NOTICE & DB PERSISTENCE -->
+<section class="sheet" data-page="13" id="ko-p13" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">11 / 핵심 기능 06 — 공지사항 게시판·단문 공지 및 DB 정합성</div>
@@ -1971,13 +2061,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       </div>
       <div class="feature-visual">
         <div class="feature-video-card video-tile" data-video-key="notice">
-          <div class="video-stage"><iframe title="notice demo video" src="https://www.youtube-nocookie.com/embed/hjFWe3gq5dM" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+          <div class="video-stage"><iframe title="notice demo video" src="https://www.youtube-nocookie.com/embed/y8ZBFm5kSLk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
           <div class="feature-video-meta">
             <span class="kicker">FEATURE 06 / DEMO VIDEO</span>
             <h3>공지사항 게시판·단문 공지·DB 영속화 시연 영상</h3>
             <p>ADMIN 공지 작성·수정 → 단문 공지 등록 → 다른 PC·재시작 후 데이터 유지 확인</p>
             <div class="video-actions">
-              <a class="video-open" href="https://youtu.be/hjFWe3gq5dM" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
+              <a class="video-open" href="https://youtu.be/y8ZBFm5kSLk" rel="noopener noreferrer" target="_blank" style="display: inline-block;">YouTube에서 열기 ↗</a>
               <button class="video-set-btn" data-open-video="notice" type="button">🎬 YouTube 링크 설정</button>
             </div>
           </div>
@@ -1988,13 +2078,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">notice.jsp / noticeForm.jsp / noticeView.jsp / NoticeServlet.java / NoticeDao.java / ChatDao.java / chatSave.jsp</div>
-    <div class="folio"><strong>12</strong> / 16</div>
+    <div class="folio"><strong>13</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 13: CLOUD DB MIGRATION & APPCONFIG -->
-<section class="sheet" data-page="13" id="ko-p13" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 14: CLOUD DB MIGRATION & APPCONFIG -->
+<section class="sheet" data-page="14" id="ko-p14" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">12 / 클라우드 DB 전환 및 설정 분리</div>
@@ -2048,13 +2138,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">src/main/java/config/AppConfig.java / src/main/java/model/DBM.java / docs/DATABASE_KO.md</div>
-    <div class="folio"><strong>13</strong> / 16</div>
+    <div class="folio"><strong>14</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 14: TROUBLESHOOTING & TEAMWORK -->
-<section class="sheet" data-page="14" id="ko-p14" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 15: TROUBLESHOOTING & TEAMWORK -->
+<section class="sheet" data-page="15" id="ko-p15" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">13 / 트러블슈팅 및 팀워크 사례</div>
@@ -2097,13 +2187,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">docs/TEAM_WORKFLOW_KO.md / docs/CHANGELOG_KO.md / .classpath / .settings/org.eclipse.jdt.core.prefs</div>
-    <div class="folio"><strong>14</strong> / 16</div>
+    <div class="folio"><strong>15</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 15: VERIFICATION & TESTING EVIDENCE -->
-<section class="sheet" data-page="15" id="ko-p15" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 16: VERIFICATION & TESTING EVIDENCE -->
+<section class="sheet" data-page="16" id="ko-p16" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">14 / 검증 및 테스트 증거</div>
@@ -2140,13 +2230,13 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">tools/test-all.py / docs/TEST_REPORT.md / docs/AUTH_TEST_REPORT.md / docs/WORKFLOW_TEST_REPORT.md</div>
-    <div class="folio"><strong>15</strong> / 16</div>
+    <div class="folio"><strong>16</strong> / 17</div>
   </footer>
 </article>
 </section>
 
-<!-- SLIDE 16: DEMO VIDEO HUB & PROJECT RETROSPECTIVE -->
-<section class="sheet" data-page="16" id="ko-p16" style="--scale: 1.3138888888888889;">
+<!-- SLIDE 17: DEMO VIDEO HUB & PROJECT RETROSPECTIVE -->
+<section class="sheet" data-page="17" id="ko-p17" style="--scale: 1.3138888888888889;">
 <article class="slide">
   <header class="slide-header">
     <div class="section">15 / 시연 영상 허브 및 프로젝트 회고·향후 계획</div>
@@ -2158,32 +2248,32 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
       <div class="hub-card">
         <div class="hub-top"><strong>① 사원·체류자격 관리</strong><span class="hub-status ready" data-hub-status="employee">動画登録済</span></div>
         <p>사원 등록, 만료 30/60/90일 필터, 퇴사 처리, CSV 내보내기</p>
-        <div class="tags"><a class="tag" href="#ko-p07">슬라이드 07 이동 →</a><button class="tag" data-open-video="employee" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p08">슬라이드 08 이동 →</a><button class="tag" data-open-video="employee" type="button">🎬 YouTube 설정</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>② 담당자·갱신 일정</strong><span class="hub-status ready" data-hub-status="schedule">動画登録済</span></div>
         <p>담당자 지정, 신청일·완료일·다음 조치 예정일, 낙관적 잠금</p>
-        <div class="tags"><a class="tag" href="#ko-p08">슬라이드 08 이동 →</a><button class="tag" data-open-video="schedule" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p09">슬라이드 09 이동 →</a><button class="tag" data-open-video="schedule" type="button">🎬 YouTube 설정</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>③ 로그인·RBAC 권한</strong><span class="hub-status ready" data-hub-status="auth">動画登録済</span></div>
         <p>개인 계정 인증, ADMIN/HR_STAFF 권한 비교, 즉시 세션 만료</p>
-        <div class="tags"><a class="tag" href="#ko-p09">슬라이드 09 이동 →</a><button class="tag" data-open-video="auth" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p10">슬라이드 10 이동 →</a><button class="tag" data-open-video="auth" type="button">🎬 YouTube 설정</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>④ 사원 증명사진 관리</strong><span class="hub-status ready" data-hub-status="photo">動画登録済</span></div>
         <p>JPG/PNG 검증, 600×800 JPEG 정규화, EXIF 제거, BLOB 저장</p>
-        <div class="tags"><a class="tag" href="#ko-p10">슬라이드 10 이동 →</a><button class="tag" data-open-video="photo" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p11">슬라이드 11 이동 →</a><button class="tag" data-open-video="photo" type="button">🎬 YouTube 설정</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>⑤ 국적 코드·다국어 UI</strong><span class="hub-status ready" data-hub-status="nationality">動画登録済</span></div>
         <p>주요 10개국+기타 입력, ISO 코드 저장, KO/JA/EN 실시간 전환</p>
-        <div class="tags"><a class="tag" href="#ko-p11">슬라이드 11 이동 →</a><button class="tag" data-open-video="nationality" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p12">슬라이드 12 이동 →</a><button class="tag" data-open-video="nationality" type="button">🎬 YouTube 설정</button></div>
       </div>
       <div class="hub-card">
         <div class="hub-top"><strong>⑥ 공지사항 게시판·영속화</strong><span class="hub-status ready" data-hub-status="notice">動画登録済</span></div>
         <p>GHR_NOTICE / SHORT_NOTICE 영속화, ROW_VERSION 충돌 방지</p>
-        <div class="tags"><a class="tag" href="#ko-p12">슬라이드 12 이동 →</a><button class="tag" data-open-video="notice" type="button">🎬 YouTube 설정</button></div>
+        <div class="tags"><a class="tag" href="#ko-p13">슬라이드 13 이동 →</a><button class="tag" data-open-video="notice" type="button">🎬 YouTube 설정</button></div>
       </div>
     </div>
     <div class="reflection-bottom">
@@ -2206,7 +2296,7 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   </div>
   <footer class="slide-footer">
     <div class="source">GlobalHR 4인 팀 프로젝트 발표 자료 (김광현 · 안성민 · 이재천 · 설수현)</div>
-    <div class="folio"><strong>16</strong> / 16</div>
+    <div class="folio"><strong>17</strong> / 17</div>
   </footer>
 </article>
 </section>
@@ -2223,12 +2313,12 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
     <div class="modal-section">
       <h4>1. 기능별 YouTube 영상 링크 (youtu.be/... 또는 youtube.com/watch?v=... 또는 11자리 ID)</h4>
       <div class="modal-form-grid">
-        <label class="modal-field"><span>① 사원·체류자격 관리 (Slide 07)</span><input id="yt-employee" placeholder="https://youtu.be/..." type="url"></label>
-        <label class="modal-field"><span>② 담당자·갱신 일정 (Slide 08)</span><input id="yt-schedule" placeholder="https://youtu.be/..." type="url"></label>
-        <label class="modal-field"><span>③ 로그인·RBAC 권한 (Slide 09)</span><input id="yt-auth" placeholder="https://youtu.be/..." type="url"></label>
-        <label class="modal-field"><span>④ 사원 증명사진 관리 (Slide 10)</span><input id="yt-photo" placeholder="https://youtu.be/..." type="url"></label>
-        <label class="modal-field"><span>⑤ 국적 코드·다국어 UI (Slide 11)</span><input id="yt-nationality" placeholder="https://youtu.be/..." type="url"></label>
-        <label class="modal-field"><span>⑥ 공지사항 게시판·영속화 (Slide 12)</span><input id="yt-notice" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>① 사원·체류자격 관리 (Slide 08)</span><input id="yt-employee" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>② 담당자·갱신 일정 (Slide 09)</span><input id="yt-schedule" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>③ 로그인·RBAC 권한 (Slide 10)</span><input id="yt-auth" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>④ 사원 증명사진 관리 (Slide 11)</span><input id="yt-photo" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>⑤ 국적 코드·다국어 UI (Slide 12)</span><input id="yt-nationality" placeholder="https://youtu.be/..." type="url"></label>
+        <label class="modal-field"><span>⑥ 공지사항 게시판·영속화 (Slide 13)</span><input id="yt-notice" placeholder="https://youtu.be/..." type="url"></label>
       </div>
     </div>
     <div class="modal-section">
@@ -2259,7 +2349,7 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
   <div class="lightbox-box">
     <img alt="확대 화면" id="lightbox-img" src="data:image/webp;base64,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">
     <div class="lightbox-caption">
-      <span id="lightbox-text">화면 캡처 확대 보기</span>
+      <span id="lightbox-text">GlobalHR メイン画面（社員台帳・在留満了アラート・ショート通知）</span>
       <button class="modal-close" id="close-lightbox" type="button">닫기 (ESC) ✕</button>
     </div>
   </div>
@@ -2268,12 +2358,12 @@ return DriverManager.getConnection(c.dbUrl(), c.jdbcProperties());</code></pre>
 <script>
 // 1. Default YouTube Links (Can be edited directly in code OR via the in-page Settings modal)
 const VIDEO_LINKS = {
-  "employee": "https://youtu.be/fvDo_cKX-J0?si=jhyDUCAx2QOUFS0c",
-  "schedule": "https://youtu.be/Cbl6mCkflS8?si=i-PahecrsGvwql5f",
+  "employee": "https://youtu.be/9zKkUldnSmI?si=ZgKS7H1IT4cTHa--",
+  "schedule": "https://youtu.be/3bNqNWVE2NE?si=bEFfhaHcRtXxgGh_",
   "auth": "https://youtu.be/HmwE2As9xx0?si=R7Dlrzt2dqgiGzbR",
-  "photo": "https://youtu.be/pwNZjg1YI9E?si=H28nNPFa-7AFNC3l",
-  "nationality": "https://youtu.be/FksGJU7idzY?si=0IeCUt9So_vYpst_",
-  "notice": "https://youtu.be/hjFWe3gq5dM"
+  "photo": "https://youtu.be/r9HSCM53z8I?si=9-1fXw7G4eub9_HC",
+  "nationality": "https://youtu.be/ln6gWVurbE8?si=slbfWcmKDCwMYNCz",
+  "notice": "https://youtu.be/y8ZBFm5kSLk?si=PuTw_5bgSTCi4Z7C"
 };
 
 const TEAM_INFO = {
@@ -2296,7 +2386,7 @@ const TEAM_INFO = {
 };
 
 (() => {
-  const TOTAL = 16;
+  const TOTAL = 17;
   const body = document.body;
   const decks = [...document.querySelectorAll('.deck')];
   const select = document.getElementById('contents');
@@ -2312,6 +2402,7 @@ const TEAM_INFO = {
   const titles = {
     ja: [
       '表紙 (GlobalHR 4人チーム)',
+      'システム詳細設計図・処理フロー',
       '01 プロジェクト概要・目標',
       '02 4人メンバー紹介・役割',
       '03 機能別協業マトリクス',
@@ -2330,6 +2421,7 @@ const TEAM_INFO = {
     ],
     ko: [
       '표지 (GlobalHR 4인 팀)',
+      '시스템 상세 설계도·처리 흐름',
       '01 프로젝트 개요·목표',
       '02 4인 팀원 소개·역할',
       '03 기능별 협업 매트릭스',
@@ -2491,7 +2583,7 @@ const TEAM_INFO = {
         a.style.display = 'none';
       }
     }
-    // Update Slide 16 Hub badges
+    // Update Slide 17 Hub badges
     for (const badge of document.querySelectorAll('[data-hub-status]')) {
       const key = badge.dataset.hubStatus;
       const hasId = Boolean(youtubeId(VIDEO_LINKS[key]));
@@ -2622,9 +2714,10 @@ const TEAM_INFO = {
   document.querySelectorAll('[data-zoom-caption]').forEach(frame => {
     frame.addEventListener('click', () => {
       const img = frame.querySelector('img');
-      if (!img) return;
-      lbImg.src = img.src;
-      lbText.textContent = frame.dataset.zoomCaption || img.alt || '';
+      const vector = frame.querySelector('svg.blueprint-vector');
+      if (!img && !vector) return;
+      lbImg.src = img ? img.src : 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(vector));
+      lbText.textContent = frame.dataset.zoomCaption || (img && img.alt) || (vector && vector.getAttribute('aria-label')) || '';
       lightboxModal.classList.add('open');
       lightboxModal.setAttribute('aria-hidden', 'false');
     });
